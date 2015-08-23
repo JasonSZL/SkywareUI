@@ -1,0 +1,851 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		4E5FDA521B89FFFC00F7268D /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA061B89FFFC00F7268D /* SMS_SDKLocalizable.strings */; };
+		4E5FDA531B89FFFC00F7268D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDA081B89FFFC00F7268D /* SMS_SDK.framework */; };
+		4E5FDA541B89FFFC00F7268D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */; };
+		4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0E1B89FFFC00F7268D /* Info.plist */; };
+		4E5FDA561B89FFFC00F7268D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0F1B89FFFC00F7268D /* main.m */; };
+		4E5FDAB81B8A011A00F7268D /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA791B8A011900F7268D /* AddDeviceViewController.m */; };
+		4E5FDAB91B8A011A00F7268D /* AddDeviceViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA7B1B8A011900F7268D /* AddDeviceViews.xib */; };
+		4E5FDABA1B8A011A00F7268D /* DeviceBindingView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA7D1B8A011900F7268D /* DeviceBindingView.m */; };
+		4E5FDABB1B8A011A00F7268D /* DeviceResetView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA7F1B8A011900F7268D /* DeviceResetView.m */; };
+		4E5FDABC1B8A011A00F7268D /* DeviceSettingErrorView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA811B8A011900F7268D /* DeviceSettingErrorView.m */; };
+		4E5FDABD1B8A011A00F7268D /* DeviceSettingSNView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA831B8A011900F7268D /* DeviceSettingSNView.m */; };
+		4E5FDABE1B8A011A00F7268D /* DeviceSettingWifiView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA851B8A011900F7268D /* DeviceSettingWifiView.m */; };
+		4E5FDABF1B8A011A00F7268D /* DeviceSmartLinkStart.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA871B8A011900F7268D /* DeviceSmartLinkStart.m */; };
+		4E5FDAC01B8A011A00F7268D /* MenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA8B1B8A011A00F7268D /* MenuViewController.m */; };
+		4E5FDAC11B8A011A00F7268D /* DeviceEditInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA8E1B8A011A00F7268D /* DeviceEditInfoViewController.m */; };
+		4E5FDAC21B8A011A00F7268D /* DeviceEditInfoViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA8F1B8A011A00F7268D /* DeviceEditInfoViewController.xib */; };
+		4E5FDAC31B8A011A00F7268D /* DeviceManagerViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA911B8A011A00F7268D /* DeviceManagerViewController.m */; };
+		4E5FDAC41B8A011A00F7268D /* SystemAboutViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA931B8A011A00F7268D /* SystemAboutViewController.m */; };
+		4E5FDAC51B8A011A00F7268D /* SystemAboutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA941B8A011A00F7268D /* SystemAboutViewController.xib */; };
+		4E5FDAC61B8A011A00F7268D /* SystemFeedBackViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA961B8A011A00F7268D /* SystemFeedBackViewController.m */; };
+		4E5FDAC71B8A011A00F7268D /* SystemFeedBackViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA971B8A011A00F7268D /* SystemFeedBackViewController.xib */; };
+		4E5FDAC81B8A011A00F7268D /* UserAccountViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA991B8A011A00F7268D /* UserAccountViewController.m */; };
+		4E5FDAC91B8A011A00F7268D /* UserEditNickNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA9B1B8A011A00F7268D /* UserEditNickNameViewController.m */; };
+		4E5FDACA1B8A011A00F7268D /* UserEditNickNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA9C1B8A011A00F7268D /* UserEditNickNameViewController.xib */; };
+		4E5FDACB1B8A011A00F7268D /* UserEditPasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA9E1B8A011A00F7268D /* UserEditPasswordViewController.m */; };
+		4E5FDACC1B8A011A00F7268D /* UserEditPasswordViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA9F1B8A011A00F7268D /* UserEditPasswordViewController.xib */; };
+		4E5FDACE1B8A011A00F7268D /* MessageCodeTool.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAA51B8A011A00F7268D /* MessageCodeTool.m */; };
+		4E5FDACF1B8A011A00F7268D /* UserLoginViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAA91B8A011A00F7268D /* UserLoginViewController.m */; };
+		4E5FDAD01B8A011A00F7268D /* UserRegisterViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAAB1B8A011A00F7268D /* UserRegisterViewController.m */; };
+		4E5FDAD11B8A011A00F7268D /* UserRetrievePasswordViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAAD1B8A011A00F7268D /* UserRetrievePasswordViewController.m */; };
+		4E5FDAD21B8A011A00F7268D /* User.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDAAF1B8A011A00F7268D /* User.storyboard */; };
+		4E5FDAD31B8A011A00F7268D /* UserCheckCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB21B8A011A00F7268D /* UserCheckCodeView.m */; };
+		4E5FDAD41B8A011A00F7268D /* UserGetCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB41B8A011A00F7268D /* UserGetCodeView.m */; };
+		4E5FDAD51B8A011A00F7268D /* UserManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB51B8A011A00F7268D /* UserManager.xib */; };
+		4E5FDAD61B8A011A00F7268D /* UserSettingPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB71B8A011A00F7268D /* UserSettingPasswordView.m */; };
+		4E5FDAD91B8A01B800F7268D /* SkywareUIInstanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAD81B8A01B800F7268D /* SkywareUIInstanceModel.m */; };
+		4E5FDADC1B8A01D800F7268D /* SkywareUIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */; };
+		4E5FDADE1B8A028900F7268D /* libSmartLinkStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDADD1B8A028900F7268D /* libSmartLinkStaticLib.a */; };
+		4E5FDAE01B8A02F200F7268D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDADF1B8A02F200F7268D /* libicucore.dylib */; };
+		4E5FDAE21B8A02FB00F7268D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDAE11B8A02FB00F7268D /* libz.dylib */; };
+		4E5FDAE41B8A030300F7268D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDAE31B8A030300F7268D /* MessageUI.framework */; };
+		4EBC50CC1B87163F00A71618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC50CB1B87163F00A71618 /* Images.xcassets */; };
+		4EBC50DB1B87163F00A71618 /* SkywareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50DA1B87163F00A71618 /* SkywareUITests.m */; };
+		A49C92898C1788FCCD814C3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919A15180EE32CF42791E1A0 /* libPods.a */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		4EBC50D51B87163F00A71618 /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = 4EBC50B31B87163F00A71618 /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = 4EBC50BA1B87163F00A71618;
+			remoteInfo = SkywareUI;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		4E5FDA071B89FFFC00F7268D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		4E5FDA081B89FFFC00F7268D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		4E5FDA091B89FFFC00F7268D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		4E5FDA0C1B89FFFC00F7268D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
+		4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
+		4E5FDA0E1B89FFFC00F7268D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4E5FDA0F1B89FFFC00F7268D /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		4E5FDA101B89FFFC00F7268D /* SkywareUI.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUI.pch; sourceTree = "<group>"; };
+		4E5FDA781B8A011900F7268D /* AddDeviceViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AddDeviceViewController.h; sourceTree = "<group>"; };
+		4E5FDA791B8A011900F7268D /* AddDeviceViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AddDeviceViewController.m; sourceTree = "<group>"; };
+		4E5FDA7B1B8A011900F7268D /* AddDeviceViews.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddDeviceViews.xib; sourceTree = "<group>"; };
+		4E5FDA7C1B8A011900F7268D /* DeviceBindingView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceBindingView.h; sourceTree = "<group>"; };
+		4E5FDA7D1B8A011900F7268D /* DeviceBindingView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceBindingView.m; sourceTree = "<group>"; };
+		4E5FDA7E1B8A011900F7268D /* DeviceResetView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceResetView.h; sourceTree = "<group>"; };
+		4E5FDA7F1B8A011900F7268D /* DeviceResetView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceResetView.m; sourceTree = "<group>"; };
+		4E5FDA801B8A011900F7268D /* DeviceSettingErrorView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSettingErrorView.h; sourceTree = "<group>"; };
+		4E5FDA811B8A011900F7268D /* DeviceSettingErrorView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSettingErrorView.m; sourceTree = "<group>"; };
+		4E5FDA821B8A011900F7268D /* DeviceSettingSNView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSettingSNView.h; sourceTree = "<group>"; };
+		4E5FDA831B8A011900F7268D /* DeviceSettingSNView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSettingSNView.m; sourceTree = "<group>"; };
+		4E5FDA841B8A011900F7268D /* DeviceSettingWifiView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSettingWifiView.h; sourceTree = "<group>"; };
+		4E5FDA851B8A011900F7268D /* DeviceSettingWifiView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSettingWifiView.m; sourceTree = "<group>"; };
+		4E5FDA861B8A011900F7268D /* DeviceSmartLinkStart.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceSmartLinkStart.h; sourceTree = "<group>"; };
+		4E5FDA871B8A011900F7268D /* DeviceSmartLinkStart.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceSmartLinkStart.m; sourceTree = "<group>"; };
+		4E5FDA8A1B8A011A00F7268D /* MenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MenuViewController.h; sourceTree = "<group>"; };
+		4E5FDA8B1B8A011A00F7268D /* MenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MenuViewController.m; sourceTree = "<group>"; };
+		4E5FDA8D1B8A011A00F7268D /* DeviceEditInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceEditInfoViewController.h; sourceTree = "<group>"; };
+		4E5FDA8E1B8A011A00F7268D /* DeviceEditInfoViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceEditInfoViewController.m; sourceTree = "<group>"; };
+		4E5FDA8F1B8A011A00F7268D /* DeviceEditInfoViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DeviceEditInfoViewController.xib; sourceTree = "<group>"; };
+		4E5FDA901B8A011A00F7268D /* DeviceManagerViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeviceManagerViewController.h; sourceTree = "<group>"; };
+		4E5FDA911B8A011A00F7268D /* DeviceManagerViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeviceManagerViewController.m; sourceTree = "<group>"; };
+		4E5FDA921B8A011A00F7268D /* SystemAboutViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemAboutViewController.h; sourceTree = "<group>"; };
+		4E5FDA931B8A011A00F7268D /* SystemAboutViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemAboutViewController.m; sourceTree = "<group>"; };
+		4E5FDA941B8A011A00F7268D /* SystemAboutViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemAboutViewController.xib; sourceTree = "<group>"; };
+		4E5FDA951B8A011A00F7268D /* SystemFeedBackViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SystemFeedBackViewController.h; sourceTree = "<group>"; };
+		4E5FDA961B8A011A00F7268D /* SystemFeedBackViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SystemFeedBackViewController.m; sourceTree = "<group>"; };
+		4E5FDA971B8A011A00F7268D /* SystemFeedBackViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SystemFeedBackViewController.xib; sourceTree = "<group>"; };
+		4E5FDA981B8A011A00F7268D /* UserAccountViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserAccountViewController.h; sourceTree = "<group>"; };
+		4E5FDA991B8A011A00F7268D /* UserAccountViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserAccountViewController.m; sourceTree = "<group>"; };
+		4E5FDA9A1B8A011A00F7268D /* UserEditNickNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditNickNameViewController.h; sourceTree = "<group>"; };
+		4E5FDA9B1B8A011A00F7268D /* UserEditNickNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditNickNameViewController.m; sourceTree = "<group>"; };
+		4E5FDA9C1B8A011A00F7268D /* UserEditNickNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEditNickNameViewController.xib; sourceTree = "<group>"; };
+		4E5FDA9D1B8A011A00F7268D /* UserEditPasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserEditPasswordViewController.h; sourceTree = "<group>"; };
+		4E5FDA9E1B8A011A00F7268D /* UserEditPasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserEditPasswordViewController.m; sourceTree = "<group>"; };
+		4E5FDA9F1B8A011A00F7268D /* UserEditPasswordViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserEditPasswordViewController.xib; sourceTree = "<group>"; };
+		4E5FDAA41B8A011A00F7268D /* MessageCodeTool.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MessageCodeTool.h; sourceTree = "<group>"; };
+		4E5FDAA51B8A011A00F7268D /* MessageCodeTool.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MessageCodeTool.m; sourceTree = "<group>"; };
+		4E5FDAA81B8A011A00F7268D /* UserLoginViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserLoginViewController.h; sourceTree = "<group>"; };
+		4E5FDAA91B8A011A00F7268D /* UserLoginViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserLoginViewController.m; sourceTree = "<group>"; };
+		4E5FDAAA1B8A011A00F7268D /* UserRegisterViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRegisterViewController.h; sourceTree = "<group>"; };
+		4E5FDAAB1B8A011A00F7268D /* UserRegisterViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRegisterViewController.m; sourceTree = "<group>"; };
+		4E5FDAAC1B8A011A00F7268D /* UserRetrievePasswordViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserRetrievePasswordViewController.h; sourceTree = "<group>"; };
+		4E5FDAAD1B8A011A00F7268D /* UserRetrievePasswordViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserRetrievePasswordViewController.m; sourceTree = "<group>"; };
+		4E5FDAAF1B8A011A00F7268D /* User.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = User.storyboard; sourceTree = "<group>"; };
+		4E5FDAB11B8A011A00F7268D /* UserCheckCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserCheckCodeView.h; sourceTree = "<group>"; };
+		4E5FDAB21B8A011A00F7268D /* UserCheckCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserCheckCodeView.m; sourceTree = "<group>"; };
+		4E5FDAB31B8A011A00F7268D /* UserGetCodeView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserGetCodeView.h; sourceTree = "<group>"; };
+		4E5FDAB41B8A011A00F7268D /* UserGetCodeView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserGetCodeView.m; sourceTree = "<group>"; };
+		4E5FDAB51B8A011A00F7268D /* UserManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserManager.xib; sourceTree = "<group>"; };
+		4E5FDAB61B8A011A00F7268D /* UserSettingPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingPasswordView.h; sourceTree = "<group>"; };
+		4E5FDAB71B8A011A00F7268D /* UserSettingPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingPasswordView.m; sourceTree = "<group>"; };
+		4E5FDAD71B8A01B800F7268D /* SkywareUIInstanceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUIInstanceModel.h; sourceTree = "<group>"; };
+		4E5FDAD81B8A01B800F7268D /* SkywareUIInstanceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkywareUIInstanceModel.m; sourceTree = "<group>"; };
+		4E5FDADA1B8A01D800F7268D /* SkywareUIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUIConst.h; sourceTree = "<group>"; };
+		4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkywareUIConst.m; sourceTree = "<group>"; };
+		4E5FDADD1B8A028900F7268D /* libSmartLinkStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSmartLinkStaticLib.a; path = Pods/HF_SmartLink/SmartLink/FrameWork/libSmartLinkStaticLib.a; sourceTree = "<group>"; };
+		4E5FDADF1B8A02F200F7268D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
+		4E5FDAE11B8A02FB00F7268D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
+		4E5FDAE31B8A030300F7268D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4EBC50BB1B87163F00A71618 /* SkywareUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkywareUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBC50CB1B87163F00A71618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
+		4EBC50D41B87163F00A71618 /* SkywareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkywareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		4EBC50D91B87163F00A71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		4EBC50DA1B87163F00A71618 /* SkywareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkywareUITests.m; sourceTree = "<group>"; };
+		88A34338B81563D81690350C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
+		919A15180EE32CF42791E1A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		CB25A093043C5F64FE15CE60 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		4EBC50B81B87163F00A71618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5FDAE41B8A030300F7268D /* MessageUI.framework in Frameworks */,
+				4E5FDAE21B8A02FB00F7268D /* libz.dylib in Frameworks */,
+				4E5FDAE01B8A02F200F7268D /* libicucore.dylib in Frameworks */,
+				4E5FDADE1B8A028900F7268D /* libSmartLinkStaticLib.a in Frameworks */,
+				A49C92898C1788FCCD814C3B /* libPods.a in Frameworks */,
+				4E5FDA531B89FFFC00F7268D /* SMS_SDK.framework in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC50D11B87163F00A71618 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		19172DC83B737D253269B7B0 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				88A34338B81563D81690350C /* Pods.debug.xcconfig */,
+				CB25A093043C5F64FE15CE60 /* Pods.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E5FDA021B89FFFC00F7268D /* Main */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA031B89FFFC00F7268D /* Controller */,
+				4E5FDA041B89FFFC00F7268D /* Lib */,
+				4E5FDA0A1B89FFFC00F7268D /* Model */,
+				4E5FDA0B1B89FFFC00F7268D /* Other */,
+				4E5FDA111B89FFFC00F7268D /* View */,
+			);
+			path = Main;
+			sourceTree = "<group>";
+		};
+		4E5FDA031B89FFFC00F7268D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E5FDA041B89FFFC00F7268D /* Lib */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA051B89FFFC00F7268D /* SMS_SDK */,
+			);
+			path = Lib;
+			sourceTree = "<group>";
+		};
+		4E5FDA051B89FFFC00F7268D /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA061B89FFFC00F7268D /* SMS_SDKLocalizable.strings */,
+				4E5FDA081B89FFFC00F7268D /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		4E5FDA0A1B89FFFC00F7268D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		4E5FDA0B1B89FFFC00F7268D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA0C1B89FFFC00F7268D /* AppDelegate.h */,
+				4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */,
+				4E5FDA0E1B89FFFC00F7268D /* Info.plist */,
+				4E5FDA0F1B89FFFC00F7268D /* main.m */,
+				4E5FDA101B89FFFC00F7268D /* SkywareUI.pch */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4E5FDA111B89FFFC00F7268D /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E5FDA751B8A011900F7268D /* SkywareUI */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA761B8A011900F7268D /* AddDeviceUI */,
+				4E5FDA881B8A011A00F7268D /* MenuUI */,
+				4E5FDAA61B8A011A00F7268D /* UserUI */,
+				4E5FDAA01B8A011A00F7268D /* Other */,
+				4E5FDAA31B8A011A00F7268D /* Tool */,
+			);
+			path = SkywareUI;
+			sourceTree = "<group>";
+		};
+		4E5FDA761B8A011900F7268D /* AddDeviceUI */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA771B8A011900F7268D /* Controller */,
+				4E5FDA7A1B8A011900F7268D /* View */,
+			);
+			path = AddDeviceUI;
+			sourceTree = "<group>";
+		};
+		4E5FDA771B8A011900F7268D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA781B8A011900F7268D /* AddDeviceViewController.h */,
+				4E5FDA791B8A011900F7268D /* AddDeviceViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E5FDA7A1B8A011900F7268D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA7B1B8A011900F7268D /* AddDeviceViews.xib */,
+				4E5FDA7C1B8A011900F7268D /* DeviceBindingView.h */,
+				4E5FDA7D1B8A011900F7268D /* DeviceBindingView.m */,
+				4E5FDA7E1B8A011900F7268D /* DeviceResetView.h */,
+				4E5FDA7F1B8A011900F7268D /* DeviceResetView.m */,
+				4E5FDA801B8A011900F7268D /* DeviceSettingErrorView.h */,
+				4E5FDA811B8A011900F7268D /* DeviceSettingErrorView.m */,
+				4E5FDA821B8A011900F7268D /* DeviceSettingSNView.h */,
+				4E5FDA831B8A011900F7268D /* DeviceSettingSNView.m */,
+				4E5FDA841B8A011900F7268D /* DeviceSettingWifiView.h */,
+				4E5FDA851B8A011900F7268D /* DeviceSettingWifiView.m */,
+				4E5FDA861B8A011900F7268D /* DeviceSmartLinkStart.h */,
+				4E5FDA871B8A011900F7268D /* DeviceSmartLinkStart.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4E5FDA881B8A011A00F7268D /* MenuUI */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA891B8A011A00F7268D /* Controller */,
+				4E5FDA8C1B8A011A00F7268D /* DetailController */,
+			);
+			path = MenuUI;
+			sourceTree = "<group>";
+		};
+		4E5FDA891B8A011A00F7268D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA8A1B8A011A00F7268D /* MenuViewController.h */,
+				4E5FDA8B1B8A011A00F7268D /* MenuViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E5FDA8C1B8A011A00F7268D /* DetailController */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA8D1B8A011A00F7268D /* DeviceEditInfoViewController.h */,
+				4E5FDA8E1B8A011A00F7268D /* DeviceEditInfoViewController.m */,
+				4E5FDA8F1B8A011A00F7268D /* DeviceEditInfoViewController.xib */,
+				4E5FDA901B8A011A00F7268D /* DeviceManagerViewController.h */,
+				4E5FDA911B8A011A00F7268D /* DeviceManagerViewController.m */,
+				4E5FDA921B8A011A00F7268D /* SystemAboutViewController.h */,
+				4E5FDA931B8A011A00F7268D /* SystemAboutViewController.m */,
+				4E5FDA941B8A011A00F7268D /* SystemAboutViewController.xib */,
+				4E5FDA951B8A011A00F7268D /* SystemFeedBackViewController.h */,
+				4E5FDA961B8A011A00F7268D /* SystemFeedBackViewController.m */,
+				4E5FDA971B8A011A00F7268D /* SystemFeedBackViewController.xib */,
+				4E5FDA981B8A011A00F7268D /* UserAccountViewController.h */,
+				4E5FDA991B8A011A00F7268D /* UserAccountViewController.m */,
+				4E5FDA9A1B8A011A00F7268D /* UserEditNickNameViewController.h */,
+				4E5FDA9B1B8A011A00F7268D /* UserEditNickNameViewController.m */,
+				4E5FDA9C1B8A011A00F7268D /* UserEditNickNameViewController.xib */,
+				4E5FDA9D1B8A011A00F7268D /* UserEditPasswordViewController.h */,
+				4E5FDA9E1B8A011A00F7268D /* UserEditPasswordViewController.m */,
+				4E5FDA9F1B8A011A00F7268D /* UserEditPasswordViewController.xib */,
+			);
+			path = DetailController;
+			sourceTree = "<group>";
+		};
+		4E5FDAA01B8A011A00F7268D /* Other */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAD71B8A01B800F7268D /* SkywareUIInstanceModel.h */,
+				4E5FDAD81B8A01B800F7268D /* SkywareUIInstanceModel.m */,
+				4E5FDADA1B8A01D800F7268D /* SkywareUIConst.h */,
+				4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */,
+			);
+			path = Other;
+			sourceTree = "<group>";
+		};
+		4E5FDAA31B8A011A00F7268D /* Tool */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAA41B8A011A00F7268D /* MessageCodeTool.h */,
+				4E5FDAA51B8A011A00F7268D /* MessageCodeTool.m */,
+			);
+			path = Tool;
+			sourceTree = "<group>";
+		};
+		4E5FDAA61B8A011A00F7268D /* UserUI */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAA71B8A011A00F7268D /* Controller */,
+				4E5FDAAE1B8A011A00F7268D /* Storyboard */,
+				4E5FDAB01B8A011A00F7268D /* View */,
+			);
+			path = UserUI;
+			sourceTree = "<group>";
+		};
+		4E5FDAA71B8A011A00F7268D /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAA81B8A011A00F7268D /* UserLoginViewController.h */,
+				4E5FDAA91B8A011A00F7268D /* UserLoginViewController.m */,
+				4E5FDAAA1B8A011A00F7268D /* UserRegisterViewController.h */,
+				4E5FDAAB1B8A011A00F7268D /* UserRegisterViewController.m */,
+				4E5FDAAC1B8A011A00F7268D /* UserRetrievePasswordViewController.h */,
+				4E5FDAAD1B8A011A00F7268D /* UserRetrievePasswordViewController.m */,
+			);
+			path = Controller;
+			sourceTree = "<group>";
+		};
+		4E5FDAAE1B8A011A00F7268D /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAAF1B8A011A00F7268D /* User.storyboard */,
+			);
+			path = Storyboard;
+			sourceTree = "<group>";
+		};
+		4E5FDAB01B8A011A00F7268D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAB11B8A011A00F7268D /* UserCheckCodeView.h */,
+				4E5FDAB21B8A011A00F7268D /* UserCheckCodeView.m */,
+				4E5FDAB31B8A011A00F7268D /* UserGetCodeView.h */,
+				4E5FDAB41B8A011A00F7268D /* UserGetCodeView.m */,
+				4E5FDAB51B8A011A00F7268D /* UserManager.xib */,
+				4E5FDAB61B8A011A00F7268D /* UserSettingPasswordView.h */,
+				4E5FDAB71B8A011A00F7268D /* UserSettingPasswordView.m */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		4EBC50B21B87163F00A71618 = {
+			isa = PBXGroup;
+			children = (
+				4EBC50BD1B87163F00A71618 /* SkywareUI */,
+				4EBC50D71B87163F00A71618 /* SkywareUITests */,
+				4EBC50BC1B87163F00A71618 /* Products */,
+				19172DC83B737D253269B7B0 /* Pods */,
+				4EC44F89F586D4ED3A310222 /* Frameworks */,
+			);
+			sourceTree = "<group>";
+		};
+		4EBC50BC1B87163F00A71618 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				4EBC50BB1B87163F00A71618 /* SkywareUI.app */,
+				4EBC50D41B87163F00A71618 /* SkywareUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		4EBC50BD1B87163F00A71618 /* SkywareUI */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDA021B89FFFC00F7268D /* Main */,
+				4E5FDA751B8A011900F7268D /* SkywareUI */,
+				4EBC50CB1B87163F00A71618 /* Images.xcassets */,
+			);
+			path = SkywareUI;
+			sourceTree = "<group>";
+		};
+		4EBC50D71B87163F00A71618 /* SkywareUITests */ = {
+			isa = PBXGroup;
+			children = (
+				4EBC50DA1B87163F00A71618 /* SkywareUITests.m */,
+				4EBC50D81B87163F00A71618 /* Supporting Files */,
+			);
+			path = SkywareUITests;
+			sourceTree = "<group>";
+		};
+		4EBC50D81B87163F00A71618 /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+				4EBC50D91B87163F00A71618 /* Info.plist */,
+			);
+			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		4EC44F89F586D4ED3A310222 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				4E5FDAE31B8A030300F7268D /* MessageUI.framework */,
+				4E5FDAE11B8A02FB00F7268D /* libz.dylib */,
+				4E5FDADF1B8A02F200F7268D /* libicucore.dylib */,
+				4E5FDADD1B8A028900F7268D /* libSmartLinkStaticLib.a */,
+				919A15180EE32CF42791E1A0 /* libPods.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		4EBC50BA1B87163F00A71618 /* SkywareUI */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBC50DE1B87163F00A71618 /* Build configuration list for PBXNativeTarget "SkywareUI" */;
+			buildPhases = (
+				6E6215E080836921296847B6 /* Check Pods Manifest.lock */,
+				4EBC50B71B87163F00A71618 /* Sources */,
+				4EBC50B81B87163F00A71618 /* Frameworks */,
+				4EBC50B91B87163F00A71618 /* Resources */,
+				FE0B96B79EBCC3ADE66365DD /* Copy Pods Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = SkywareUI;
+			productName = SkywareUI;
+			productReference = 4EBC50BB1B87163F00A71618 /* SkywareUI.app */;
+			productType = "com.apple.product-type.application";
+		};
+		4EBC50D31B87163F00A71618 /* SkywareUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 4EBC50E11B87163F00A71618 /* Build configuration list for PBXNativeTarget "SkywareUITests" */;
+			buildPhases = (
+				4EBC50D01B87163F00A71618 /* Sources */,
+				4EBC50D11B87163F00A71618 /* Frameworks */,
+				4EBC50D21B87163F00A71618 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				4EBC50D61B87163F00A71618 /* PBXTargetDependency */,
+			);
+			name = SkywareUITests;
+			productName = SkywareUITests;
+			productReference = 4EBC50D41B87163F00A71618 /* SkywareUITests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		4EBC50B31B87163F00A71618 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0640;
+				ORGANIZATIONNAME = skyware;
+				TargetAttributes = {
+					4EBC50BA1B87163F00A71618 = {
+						CreatedOnToolsVersion = 6.4;
+					};
+					4EBC50D31B87163F00A71618 = {
+						CreatedOnToolsVersion = 6.4;
+						TestTargetID = 4EBC50BA1B87163F00A71618;
+					};
+				};
+			};
+			buildConfigurationList = 4EBC50B61B87163F00A71618 /* Build configuration list for PBXProject "SkywareUI" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+				"zh-Hans",
+			);
+			mainGroup = 4EBC50B21B87163F00A71618;
+			productRefGroup = 4EBC50BC1B87163F00A71618 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				4EBC50BA1B87163F00A71618 /* SkywareUI */,
+				4EBC50D31B87163F00A71618 /* SkywareUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		4EBC50B91B87163F00A71618 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5FDA521B89FFFC00F7268D /* SMS_SDKLocalizable.strings in Resources */,
+				4E5FDAD51B8A011A00F7268D /* UserManager.xib in Resources */,
+				4E5FDAD21B8A011A00F7268D /* User.storyboard in Resources */,
+				4E5FDACA1B8A011A00F7268D /* UserEditNickNameViewController.xib in Resources */,
+				4E5FDAC51B8A011A00F7268D /* SystemAboutViewController.xib in Resources */,
+				4E5FDACC1B8A011A00F7268D /* UserEditPasswordViewController.xib in Resources */,
+				4EBC50CC1B87163F00A71618 /* Images.xcassets in Resources */,
+				4E5FDAB91B8A011A00F7268D /* AddDeviceViews.xib in Resources */,
+				4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */,
+				4E5FDAC71B8A011A00F7268D /* SystemFeedBackViewController.xib in Resources */,
+				4E5FDAC21B8A011A00F7268D /* DeviceEditInfoViewController.xib in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC50D21B87163F00A71618 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		6E6215E080836921296847B6 /* Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		FE0B96B79EBCC3ADE66365DD /* Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods/Pods-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		4EBC50B71B87163F00A71618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4E5FDAD31B8A011A00F7268D /* UserCheckCodeView.m in Sources */,
+				4E5FDACB1B8A011A00F7268D /* UserEditPasswordViewController.m in Sources */,
+				4E5FDAD01B8A011A00F7268D /* UserRegisterViewController.m in Sources */,
+				4E5FDABA1B8A011A00F7268D /* DeviceBindingView.m in Sources */,
+				4E5FDACE1B8A011A00F7268D /* MessageCodeTool.m in Sources */,
+				4E5FDABF1B8A011A00F7268D /* DeviceSmartLinkStart.m in Sources */,
+				4E5FDA561B89FFFC00F7268D /* main.m in Sources */,
+				4E5FDABE1B8A011A00F7268D /* DeviceSettingWifiView.m in Sources */,
+				4E5FDAD11B8A011A00F7268D /* UserRetrievePasswordViewController.m in Sources */,
+				4E5FDABC1B8A011A00F7268D /* DeviceSettingErrorView.m in Sources */,
+				4E5FDA541B89FFFC00F7268D /* AppDelegate.m in Sources */,
+				4E5FDAC81B8A011A00F7268D /* UserAccountViewController.m in Sources */,
+				4E5FDAC41B8A011A00F7268D /* SystemAboutViewController.m in Sources */,
+				4E5FDACF1B8A011A00F7268D /* UserLoginViewController.m in Sources */,
+				4E5FDABD1B8A011A00F7268D /* DeviceSettingSNView.m in Sources */,
+				4E5FDABB1B8A011A00F7268D /* DeviceResetView.m in Sources */,
+				4E5FDAD41B8A011A00F7268D /* UserGetCodeView.m in Sources */,
+				4E5FDAC91B8A011A00F7268D /* UserEditNickNameViewController.m in Sources */,
+				4E5FDAC11B8A011A00F7268D /* DeviceEditInfoViewController.m in Sources */,
+				4E5FDAD61B8A011A00F7268D /* UserSettingPasswordView.m in Sources */,
+				4E5FDADC1B8A01D800F7268D /* SkywareUIConst.m in Sources */,
+				4E5FDAC61B8A011A00F7268D /* SystemFeedBackViewController.m in Sources */,
+				4E5FDAD91B8A01B800F7268D /* SkywareUIInstanceModel.m in Sources */,
+				4E5FDAB81B8A011A00F7268D /* AddDeviceViewController.m in Sources */,
+				4E5FDAC31B8A011A00F7268D /* DeviceManagerViewController.m in Sources */,
+				4E5FDAC01B8A011A00F7268D /* MenuViewController.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		4EBC50D01B87163F00A71618 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				4EBC50DB1B87163F00A71618 /* SkywareUITests.m in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		4EBC50D61B87163F00A71618 /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = 4EBC50BA1B87163F00A71618 /* SkywareUI */;
+			targetProxy = 4EBC50D51B87163F00A71618 /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		4E5FDA061B89FFFC00F7268D /* SMS_SDKLocalizable.strings */ = {
+			isa = PBXVariantGroup;
+			children = (
+				4E5FDA071B89FFFC00F7268D /* en */,
+				4E5FDA091B89FFFC00F7268D /* zh-Hans */,
+			);
+			name = SMS_SDKLocalizable.strings;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		4EBC50DC1B87163F00A71618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_SYMBOLS_PRIVATE_EXTERN = NO;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		4EBC50DD1B87163F00A71618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		4EBC50DF1B87163F00A71618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = 88A34338B81563D81690350C /* Pods.debug.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SkywareUI/Main/Lib/SMS_SDK",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SkywareUI/Main/Other/SkywareUI.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SkywareUI/Main/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/HF_SmartLink/SmartLink/FrameWork",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		4EBC50E01B87163F00A71618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			baseConfigurationReference = CB25A093043C5F64FE15CE60 /* Pods.release.xcconfig */;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/SkywareUI/Main/Lib/SMS_SDK",
+				);
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SkywareUI/Main/Other/SkywareUI.pch";
+				INFOPLIST_FILE = "$(SRCROOT)/SkywareUI/Main/Other/Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(PROJECT_DIR)/Pods/HF_SmartLink/SmartLink/FrameWork",
+				);
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
+		4EBC50E21B87163F00A71618 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SkywareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkywareUI.app/SkywareUI";
+			};
+			name = Debug;
+		};
+		4EBC50E31B87163F00A71618 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				FRAMEWORK_SEARCH_PATHS = (
+					"$(SDKROOT)/Developer/Library/Frameworks",
+					"$(inherited)",
+				);
+				INFOPLIST_FILE = SkywareUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkywareUI.app/SkywareUI";
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		4EBC50B61B87163F00A71618 /* Build configuration list for PBXProject "SkywareUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBC50DC1B87163F00A71618 /* Debug */,
+				4EBC50DD1B87163F00A71618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EBC50DE1B87163F00A71618 /* Build configuration list for PBXNativeTarget "SkywareUI" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBC50DF1B87163F00A71618 /* Debug */,
+				4EBC50E01B87163F00A71618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		4EBC50E11B87163F00A71618 /* Build configuration list for PBXNativeTarget "SkywareUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				4EBC50E21B87163F00A71618 /* Debug */,
+				4EBC50E31B87163F00A71618 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 4EBC50B31B87163F00A71618 /* Project object */;
+}
