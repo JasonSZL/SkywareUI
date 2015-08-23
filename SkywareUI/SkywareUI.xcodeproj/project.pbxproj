@@ -7,8 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		4E5FDA521B89FFFC00F7268D /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA061B89FFFC00F7268D /* SMS_SDKLocalizable.strings */; };
-		4E5FDA531B89FFFC00F7268D /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDA081B89FFFC00F7268D /* SMS_SDK.framework */; };
+		4E10A2291B8A104C00832576 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A2281B8A104C00832576 /* Launch Screen.xib */; };
+		4E10A2331B8A264300832576 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A22F1B8A264300832576 /* SMS_SDKLocalizable.strings */; };
+		4E10A2341B8A264300832576 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E10A2311B8A264300832576 /* SMS_SDK.framework */; };
 		4E5FDA541B89FFFC00F7268D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */; };
 		4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0E1B89FFFC00F7268D /* Info.plist */; };
 		4E5FDA561B89FFFC00F7268D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0F1B89FFFC00F7268D /* main.m */; };
@@ -64,9 +65,10 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		4E5FDA071B89FFFC00F7268D /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
-		4E5FDA081B89FFFC00F7268D /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
-		4E5FDA091B89FFFC00F7268D /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		4E10A2281B8A104C00832576 /* Launch Screen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = "Launch Screen.xib"; sourceTree = "<group>"; };
+		4E10A2301B8A264300832576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
+		4E10A2311B8A264300832576 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
+		4E10A2321B8A264300832576 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
 		4E5FDA0C1B89FFFC00F7268D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E5FDA0E1B89FFFC00F7268D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -151,8 +153,8 @@
 				4E5FDAE21B8A02FB00F7268D /* libz.dylib in Frameworks */,
 				4E5FDAE01B8A02F200F7268D /* libicucore.dylib in Frameworks */,
 				4E5FDADE1B8A028900F7268D /* libSmartLinkStaticLib.a in Frameworks */,
+				4E10A2341B8A264300832576 /* SMS_SDK.framework in Frameworks */,
 				A49C92898C1788FCCD814C3B /* libPods.a in Frameworks */,
-				4E5FDA531B89FFFC00F7268D /* SMS_SDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -173,6 +175,23 @@
 				CB25A093043C5F64FE15CE60 /* Pods.release.xcconfig */,
 			);
 			name = Pods;
+			sourceTree = "<group>";
+		};
+		4E10A22D1B8A262F00832576 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				4E10A22E1B8A264300832576 /* SMS_SDK */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		4E10A22E1B8A264300832576 /* SMS_SDK */ = {
+			isa = PBXGroup;
+			children = (
+				4E10A22F1B8A264300832576 /* SMS_SDKLocalizable.strings */,
+				4E10A2311B8A264300832576 /* SMS_SDK.framework */,
+			);
+			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
 		4E5FDA021B89FFFC00F7268D /* Main */ = {
@@ -197,18 +216,8 @@
 		4E5FDA041B89FFFC00F7268D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
-				4E5FDA051B89FFFC00F7268D /* SMS_SDK */,
 			);
 			path = Lib;
-			sourceTree = "<group>";
-		};
-		4E5FDA051B89FFFC00F7268D /* SMS_SDK */ = {
-			isa = PBXGroup;
-			children = (
-				4E5FDA061B89FFFC00F7268D /* SMS_SDKLocalizable.strings */,
-				4E5FDA081B89FFFC00F7268D /* SMS_SDK.framework */,
-			);
-			path = SMS_SDK;
 			sourceTree = "<group>";
 		};
 		4E5FDA0A1B89FFFC00F7268D /* Model */ = {
@@ -226,6 +235,7 @@
 				4E5FDA0E1B89FFFC00F7268D /* Info.plist */,
 				4E5FDA0F1B89FFFC00F7268D /* main.m */,
 				4E5FDA101B89FFFC00F7268D /* SkywareUI.pch */,
+				4E10A2281B8A104C00832576 /* Launch Screen.xib */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -240,6 +250,7 @@
 		4E5FDA751B8A011900F7268D /* SkywareUI */ = {
 			isa = PBXGroup;
 			children = (
+				4E10A22D1B8A262F00832576 /* Resources */,
 				4E5FDA761B8A011900F7268D /* AddDeviceUI */,
 				4E5FDA881B8A011A00F7268D /* MenuUI */,
 				4E5FDAA61B8A011A00F7268D /* UserUI */,
@@ -538,12 +549,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				4E5FDA521B89FFFC00F7268D /* SMS_SDKLocalizable.strings in Resources */,
 				4E5FDAD51B8A011A00F7268D /* UserManager.xib in Resources */,
 				4E5FDAD21B8A011A00F7268D /* User.storyboard in Resources */,
 				4E5FDACA1B8A011A00F7268D /* UserEditNickNameViewController.xib in Resources */,
 				4E5FDAC51B8A011A00F7268D /* SystemAboutViewController.xib in Resources */,
+				4E10A2291B8A104C00832576 /* Launch Screen.xib in Resources */,
 				4E5FDACC1B8A011A00F7268D /* UserEditPasswordViewController.xib in Resources */,
+				4E10A2331B8A264300832576 /* SMS_SDKLocalizable.strings in Resources */,
 				4EBC50CC1B87163F00A71618 /* Images.xcassets in Resources */,
 				4E5FDAB91B8A011A00F7268D /* AddDeviceViews.xib in Resources */,
 				4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */,
@@ -647,11 +659,11 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		4E5FDA061B89FFFC00F7268D /* SMS_SDKLocalizable.strings */ = {
+		4E10A22F1B8A264300832576 /* SMS_SDKLocalizable.strings */ = {
 			isa = PBXVariantGroup;
 			children = (
-				4E5FDA071B89FFFC00F7268D /* en */,
-				4E5FDA091B89FFFC00F7268D /* zh-Hans */,
+				4E10A2301B8A264300832576 /* en */,
+				4E10A2321B8A264300832576 /* zh-Hans */,
 			);
 			name = SMS_SDKLocalizable.strings;
 			sourceTree = "<group>";
@@ -747,6 +759,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SkywareUI/Main/Lib/SMS_SDK",
+					"$(PROJECT_DIR)/SkywareUI/SkywareUI/Resources/SMS_SDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SkywareUI/Main/Other/SkywareUI.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SkywareUI/Main/Other/Info.plist";
@@ -768,6 +781,7 @@
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(inherited)",
 					"$(PROJECT_DIR)/SkywareUI/Main/Lib/SMS_SDK",
+					"$(PROJECT_DIR)/SkywareUI/SkywareUI/Resources/SMS_SDK",
 				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SkywareUI/Main/Other/SkywareUI.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SkywareUI/Main/Other/Info.plist";

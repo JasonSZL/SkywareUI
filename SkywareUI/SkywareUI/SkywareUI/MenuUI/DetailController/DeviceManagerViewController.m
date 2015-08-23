@@ -7,6 +7,7 @@
 //
 
 #import "DeviceManagerViewController.h"
+#import <BundleTool.h>
 
 @interface DeviceManagerViewController ()
 

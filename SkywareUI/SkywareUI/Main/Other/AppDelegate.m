@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "AddDeviceViewController.h"
 
 @interface AppDelegate ()
 
@@ -16,7 +17,14 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-    // Override point for customization after application launch.
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    AddDeviceViewController *add = [[AddDeviceViewController alloc] init];
+    self.window.rootViewController = add;
+    [self.window makeKeyAndVisible];
+    
+
     return YES;
 }
 
