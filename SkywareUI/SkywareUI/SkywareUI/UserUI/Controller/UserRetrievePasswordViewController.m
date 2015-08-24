@@ -7,8 +7,6 @@
 //
 
 #import "UserRetrievePasswordViewController.h"
-#import "MessageCodeTool.h"
-#import "TimeButton.h"
 
 @interface UserRetrievePasswordViewController ()
 

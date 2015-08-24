@@ -7,7 +7,6 @@
 //
 
 #import "DeviceSettingWifiView.h"
-#import <Reachability.h>
 
 @interface DeviceSettingWifiView ()
 /***  Wifi 名称  */

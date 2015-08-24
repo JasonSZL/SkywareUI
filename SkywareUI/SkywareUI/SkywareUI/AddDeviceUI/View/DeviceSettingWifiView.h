@@ -8,6 +8,8 @@
 
 #import "StepNextView.h"
 #import "SkywareUIInstanceModel.h"
+#import <Reachability.h>
+#import <ImportClass.h>
 
 @interface DeviceSettingWifiView : StepNextView
 

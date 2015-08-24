@@ -18,12 +18,12 @@
     [super viewDidLoad];
     [self setNavTitle:@"账号管理"];
     [self addAccountData];
-    [kNotificationCenter addObserver:self selector:@selector(editUserNickName:) name:kEditUserNickNameRefreshTableView object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(editUserNickName:) name:kEditUserNickNameRefreshTableView object:nil];
 }
 
 - (void)dealloc
 {
-    [kNotificationCenter removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)editUserNickName:(NSNotification *) notification
@@ -120,7 +120,7 @@
 - (void) updateuserPhotoWithUrl:(NSString *) url
 {
     [SkywareUserManagement UserEditUserWithParamesers:@{@"user_img":url} Success:^(SkywareResult *result) {
-        [kNotificationCenter postNotificationName:kEditUserNickNameRefreshTableView object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kEditUserNickNameRefreshTableView object:nil];
     } failure:^(SkywareResult *result) {
         
     }];

@@ -8,11 +8,12 @@
 
 #import "StepNextView.h"
 #import "SkywareUIInstanceModel.h"
+#import <ImportClass.h>
 
 @interface UserSettingPasswordView : StepNextView
 
 /**
- *  获取设置密码V
+ *  获取设置密码View
  */
 + (instancetype)getUserSettingPasswordView;
 

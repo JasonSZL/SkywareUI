@@ -43,7 +43,7 @@
     [SkywareUserManagement UserEditUserWithParamesers:@{@"user_name":self.user_nickName.text} Success:^(SkywareResult *result) {
         [self.navigationController popViewControllerAnimated:YES];
         [SVProgressHUD showSuccessWithStatus:@"修改成功"];
-        [kNotificationCenter postNotificationName:kEditUserNickNameRefreshTableView object:nil userInfo:@{@"user_name":self.user_nickName.text}];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kEditUserNickNameRefreshTableView object:nil userInfo:@{@"user_name":self.user_nickName.text}];
     } failure:^(SkywareResult *result) {
         [SVProgressHUD showErrorWithStatus:@"修改失败,请稍后重试"];
     }];

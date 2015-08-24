@@ -7,7 +7,6 @@
 //
 
 #import "DeviceManagerViewController.h"
-#import <BundleTool.h>
 
 @interface DeviceManagerViewController ()
 
@@ -19,12 +18,12 @@
     [super viewDidLoad];
     [self setNavTitle:@"设备管理"];
     [self getUserAllDevice];
-    [kNotificationCenter addObserver:self selector:@selector(getUserAllDevice) name:kDeviceRelseaseUserRefreshTableView object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserAllDevice) name:kDeviceRelseaseUserRefreshTableView object:nil];
 }
 
 - (void)dealloc
 {
-    [kNotificationCenter removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void)getUserAllDevice

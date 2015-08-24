@@ -8,6 +8,7 @@
 
 #import "UserLoginViewController.h"
 #import "SkywareUIInstanceModel.h"
+#import <ImportClass.h>
 
 @interface UserLoginViewController ()
 /*** 登录名 */

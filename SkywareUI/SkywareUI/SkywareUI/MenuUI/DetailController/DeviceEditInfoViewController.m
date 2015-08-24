@@ -75,7 +75,7 @@
     if (buttonIndex == 1) {
         [SkywareDeviceManagement DeviceReleaseUser:@[_DeviceInfo.device_id] Success:^(SkywareResult *result) {
             [SVProgressHUD dismiss];
-            [kNotificationCenter postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
+            [[NSNotificationCenter defaultCenter] postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
             [self.navigationController popViewControllerAnimated:YES];
         } failure:^(SkywareResult *result) {
             [SVProgressHUD showErrorWithStatus:@"解绑失败,请稍后重试"];
@@ -94,7 +94,7 @@
     update.device_lock = [NSString stringWithFormat:@"%d",!self.switchBtn.isOn];
     [SkywareDeviceManagement DeviceUpdateDeviceInfo:update Success:^(SkywareResult *result) {
         [self.navigationController popViewControllerAnimated:YES];
-        [kNotificationCenter postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
     } failure:^(SkywareResult *result) {
         [SVProgressHUD showErrorWithStatus:@"修改失败，请稍后重试"];
     }];

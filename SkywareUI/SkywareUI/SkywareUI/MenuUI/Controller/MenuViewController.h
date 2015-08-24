@@ -14,6 +14,7 @@
 #import "SystemFeedBackViewController.h"
 #import "AddDeviceViewController.h"
 #import "SkywareUIConst.h"
+#import <ImportClass.h>
 
 @interface MenuViewController : BaseTableViewController
 

@@ -8,6 +8,9 @@
 
 #import "BaseViewController.h"
 #import "SkywareUIInstanceModel.h"
+#import "MessageCodeTool.h"
+#import "TimeButton.h"
+#import <ImportClass.h>
 
 @interface UserRetrievePasswordViewController : BaseViewController
 
