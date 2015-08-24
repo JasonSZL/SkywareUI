@@ -7,7 +7,7 @@
 //
 
 #import "MessageCodeTool.h"
-#import <SMS_SDK/SMS_SDK.h>
+#import "SMS_SDK.h"
 
 @implementation MessageCodeTool
 

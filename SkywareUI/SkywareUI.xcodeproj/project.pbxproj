@@ -10,6 +10,18 @@
 		4E10A2291B8A104C00832576 /* Launch Screen.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A2281B8A104C00832576 /* Launch Screen.xib */; };
 		4E10A24A1B8AEBBF00832576 /* SMS_SDKLocalizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 4E10A2461B8AEBBF00832576 /* SMS_SDKLocalizable.strings */; };
 		4E10A24B1B8AEBBF00832576 /* SMS_SDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E10A2481B8AEBBF00832576 /* SMS_SDK.framework */; };
+		4E5433B61B8B14F500BFA012 /* icon_setting_about@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433B51B8B14F500BFA012 /* icon_setting_about@2x.png */; };
+		4E5433B81B8B150D00BFA012 /* icon_setting_buy@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433B71B8B150D00BFA012 /* icon_setting_buy@2x.png */; };
+		4E5433BA1B8B151400BFA012 /* icon_setting_device@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433B91B8B151400BFA012 /* icon_setting_device@2x.png */; };
+		4E5433BC1B8B151D00BFA012 /* icon_setting_feedback@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433BB1B8B151D00BFA012 /* icon_setting_feedback@2x.png */; };
+		4E5433BE1B8B152600BFA012 /* icon_setting_help@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433BD1B8B152600BFA012 /* icon_setting_help@2x.png */; };
+		4E5433C01B8B152E00BFA012 /* icon_setting_scan@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433BF1B8B152E00BFA012 /* icon_setting_scan@2x.png */; };
+		4E5433C21B8B153600BFA012 /* icon_setting_timer@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433C11B8B153600BFA012 /* icon_setting_timer@2x.png */; };
+		4E5433C41B8B155200BFA012 /* erweima@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433C31B8B155200BFA012 /* erweima@2x.png */; };
+		4E5433C61B8B156100BFA012 /* cb_red_default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433C51B8B156100BFA012 /* cb_red_default@2x.png */; };
+		4E5433C81B8B156800BFA012 /* cb_red_pressed@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433C71B8B156800BFA012 /* cb_red_pressed@2x.png */; };
+		4E5433CA1B8B158300BFA012 /* settingWifiAlert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433C91B8B158300BFA012 /* settingWifiAlert@2x.png */; };
+		4E5433CC1B8B158A00BFA012 /* smartlink_hint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433CB1B8B158A00BFA012 /* smartlink_hint@2x.png */; };
 		4E5FDA541B89FFFC00F7268D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */; };
 		4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0E1B89FFFC00F7268D /* Info.plist */; };
 		4E5FDA561B89FFFC00F7268D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0F1B89FFFC00F7268D /* main.m */; };
@@ -69,6 +81,24 @@
 		4E10A2471B8AEBBF00832576 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/SMS_SDKLocalizable.strings; sourceTree = "<group>"; };
 		4E10A2481B8AEBBF00832576 /* SMS_SDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = SMS_SDK.framework; sourceTree = "<group>"; };
 		4E10A2491B8AEBBF00832576 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/SMS_SDKLocalizable.strings"; sourceTree = "<group>"; };
+		4E5433AE1B8B105800BFA012 /* CountryAndAreaCode.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CountryAndAreaCode.h; sourceTree = "<group>"; };
+		4E5433AF1B8B105800BFA012 /* SMS_AddressBook.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_AddressBook.h; sourceTree = "<group>"; };
+		4E5433B01B8B105800BFA012 /* SMS_SDK.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_SDK.h; sourceTree = "<group>"; };
+		4E5433B11B8B105800BFA012 /* SMS_SDKError.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_SDKError.h; sourceTree = "<group>"; };
+		4E5433B21B8B105800BFA012 /* SMS_SDKResultHanderDef.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_SDKResultHanderDef.h; sourceTree = "<group>"; };
+		4E5433B31B8B105800BFA012 /* SMS_UserInfo.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SMS_UserInfo.h; sourceTree = "<group>"; };
+		4E5433B51B8B14F500BFA012 /* icon_setting_about@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_about@2x.png"; sourceTree = "<group>"; };
+		4E5433B71B8B150D00BFA012 /* icon_setting_buy@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_buy@2x.png"; sourceTree = "<group>"; };
+		4E5433B91B8B151400BFA012 /* icon_setting_device@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_device@2x.png"; sourceTree = "<group>"; };
+		4E5433BB1B8B151D00BFA012 /* icon_setting_feedback@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_feedback@2x.png"; sourceTree = "<group>"; };
+		4E5433BD1B8B152600BFA012 /* icon_setting_help@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_help@2x.png"; sourceTree = "<group>"; };
+		4E5433BF1B8B152E00BFA012 /* icon_setting_scan@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_scan@2x.png"; sourceTree = "<group>"; };
+		4E5433C11B8B153600BFA012 /* icon_setting_timer@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "icon_setting_timer@2x.png"; sourceTree = "<group>"; };
+		4E5433C31B8B155200BFA012 /* erweima@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "erweima@2x.png"; sourceTree = "<group>"; };
+		4E5433C51B8B156100BFA012 /* cb_red_default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cb_red_default@2x.png"; sourceTree = "<group>"; };
+		4E5433C71B8B156800BFA012 /* cb_red_pressed@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "cb_red_pressed@2x.png"; sourceTree = "<group>"; };
+		4E5433C91B8B158300BFA012 /* settingWifiAlert@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "settingWifiAlert@2x.png"; sourceTree = "<group>"; };
+		4E5433CB1B8B158A00BFA012 /* smartlink_hint@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "smartlink_hint@2x.png"; sourceTree = "<group>"; };
 		4E5FDA0C1B89FFFC00F7268D /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
 		4E5FDA0E1B89FFFC00F7268D /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -180,6 +210,7 @@
 		4E10A22D1B8A262F00832576 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E5433B41B8B149800BFA012 /* Image */,
 				4E10A2451B8AEBBF00832576 /* SMS_SDK */,
 			);
 			path = Resources;
@@ -192,6 +223,38 @@
 				4E10A2481B8AEBBF00832576 /* SMS_SDK.framework */,
 			);
 			path = SMS_SDK;
+			sourceTree = "<group>";
+		};
+		4E5433AD1B8B105800BFA012 /* Headers */ = {
+			isa = PBXGroup;
+			children = (
+				4E5433AE1B8B105800BFA012 /* CountryAndAreaCode.h */,
+				4E5433AF1B8B105800BFA012 /* SMS_AddressBook.h */,
+				4E5433B01B8B105800BFA012 /* SMS_SDK.h */,
+				4E5433B11B8B105800BFA012 /* SMS_SDKError.h */,
+				4E5433B21B8B105800BFA012 /* SMS_SDKResultHanderDef.h */,
+				4E5433B31B8B105800BFA012 /* SMS_UserInfo.h */,
+			);
+			path = Headers;
+			sourceTree = "<group>";
+		};
+		4E5433B41B8B149800BFA012 /* Image */ = {
+			isa = PBXGroup;
+			children = (
+				4E5433CB1B8B158A00BFA012 /* smartlink_hint@2x.png */,
+				4E5433C91B8B158300BFA012 /* settingWifiAlert@2x.png */,
+				4E5433C71B8B156800BFA012 /* cb_red_pressed@2x.png */,
+				4E5433C51B8B156100BFA012 /* cb_red_default@2x.png */,
+				4E5433C31B8B155200BFA012 /* erweima@2x.png */,
+				4E5433C11B8B153600BFA012 /* icon_setting_timer@2x.png */,
+				4E5433BF1B8B152E00BFA012 /* icon_setting_scan@2x.png */,
+				4E5433BD1B8B152600BFA012 /* icon_setting_help@2x.png */,
+				4E5433BB1B8B151D00BFA012 /* icon_setting_feedback@2x.png */,
+				4E5433B91B8B151400BFA012 /* icon_setting_device@2x.png */,
+				4E5433B71B8B150D00BFA012 /* icon_setting_buy@2x.png */,
+				4E5433B51B8B14F500BFA012 /* icon_setting_about@2x.png */,
+			);
+			path = Image;
 			sourceTree = "<group>";
 		};
 		4E5FDA021B89FFFC00F7268D /* Main */ = {
@@ -216,6 +279,7 @@
 		4E5FDA041B89FFFC00F7268D /* Lib */ = {
 			isa = PBXGroup;
 			children = (
+				4E5433AD1B8B105800BFA012 /* Headers */,
 			);
 			path = Lib;
 			sourceTree = "<group>";
@@ -550,14 +614,26 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5FDAD51B8A011A00F7268D /* UserManager.xib in Resources */,
+				4E5433CC1B8B158A00BFA012 /* smartlink_hint@2x.png in Resources */,
+				4E5433C01B8B152E00BFA012 /* icon_setting_scan@2x.png in Resources */,
+				4E5433C81B8B156800BFA012 /* cb_red_pressed@2x.png in Resources */,
 				4E5FDAD21B8A011A00F7268D /* User.storyboard in Resources */,
 				4E5FDACA1B8A011A00F7268D /* UserEditNickNameViewController.xib in Resources */,
+				4E5433BC1B8B151D00BFA012 /* icon_setting_feedback@2x.png in Resources */,
 				4E5FDAC51B8A011A00F7268D /* SystemAboutViewController.xib in Resources */,
+				4E5433BE1B8B152600BFA012 /* icon_setting_help@2x.png in Resources */,
+				4E5433B61B8B14F500BFA012 /* icon_setting_about@2x.png in Resources */,
+				4E5433C21B8B153600BFA012 /* icon_setting_timer@2x.png in Resources */,
+				4E5433C41B8B155200BFA012 /* erweima@2x.png in Resources */,
+				4E5433B81B8B150D00BFA012 /* icon_setting_buy@2x.png in Resources */,
+				4E5433BA1B8B151400BFA012 /* icon_setting_device@2x.png in Resources */,
 				4E10A24A1B8AEBBF00832576 /* SMS_SDKLocalizable.strings in Resources */,
 				4E10A2291B8A104C00832576 /* Launch Screen.xib in Resources */,
 				4E5FDACC1B8A011A00F7268D /* UserEditPasswordViewController.xib in Resources */,
 				4EBC50CC1B87163F00A71618 /* Images.xcassets in Resources */,
+				4E5433CA1B8B158300BFA012 /* settingWifiAlert@2x.png in Resources */,
 				4E5FDAB91B8A011A00F7268D /* AddDeviceViews.xib in Resources */,
+				4E5433C61B8B156100BFA012 /* cb_red_default@2x.png in Resources */,
 				4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */,
 				4E5FDAC71B8A011A00F7268D /* SystemFeedBackViewController.xib in Resources */,
 				4E5FDAC21B8A011A00F7268D /* DeviceEditInfoViewController.xib in Resources */,
