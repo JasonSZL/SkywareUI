@@ -7,6 +7,8 @@
 //
 
 #import "DeviceSettingWifiView.h"
+#import <BaseDelegate.h>
+#define Delegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface DeviceSettingWifiView ()
 /***  Wifi 名称  */
@@ -45,7 +47,7 @@
     }else{
         self.connectLabel.text = @"请先连接WiFi";
     }
-    [kNotificationCenter addObserver:self selector:@selector(networkChange:) name:kReachabilityChangedNotification object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(networkChange:) name:kReachabilityChangedNotification object:nil];
 }
 
 + (instancetype)createDeviceSettingWifiView
@@ -72,7 +74,7 @@
 }
 
 - (IBAction)cleanBtnClick:(UIButton *)sender {
-    [MainDelegate.navigationController popToRootViewControllerAnimated:YES];
+    [Delegate.navigationController popToRootViewControllerAnimated:YES];
 }
 
 /**
@@ -104,7 +106,7 @@
 
 - (void)dealloc
 {
-    [kNotificationCenter removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 @end

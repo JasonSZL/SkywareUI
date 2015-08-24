@@ -11,7 +11,8 @@
 #import "UserLoginViewController.h"
 #import "UserEditNickNameViewController.h"
 #import "UserEditPasswordViewController.h"
-#import <ImportClass.h>
+#import <UIImage+Extension.h>
+#import <PathTool.h>
 
 @interface UserAccountViewController : BaseTableViewController
 

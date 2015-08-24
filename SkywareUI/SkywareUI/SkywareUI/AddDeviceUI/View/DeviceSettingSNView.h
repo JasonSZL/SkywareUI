@@ -8,7 +8,7 @@
 
 #import "StepNextView.h"
 #import "SkywareUIInstanceModel.h"
-#import <ImportClass.h>
+#import <QRCodeViewController.h>
 
 @interface DeviceSettingSNView : StepNextView
 /**

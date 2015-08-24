@@ -7,7 +7,8 @@
 //
 
 #import "DeviceSettingErrorView.h"
-
+#import <BaseDelegate.h>
+#define Delegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 @interface DeviceSettingErrorView ()
 
 /**
@@ -55,7 +56,7 @@
 }
 
 - (IBAction)cleanBtnClick:(UIButton *)sender {
-    [MainDelegate.navigationController popToRootViewControllerAnimated:YES];
+    [Delegate.navigationController popToRootViewControllerAnimated:YES];
 }
 
 

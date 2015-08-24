@@ -7,7 +7,8 @@
 //
 
 #import "MenuViewController.h"
-
+#import <BaseDelegate.h>
+#define Delegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 @interface MenuViewController ()
 
 @end
@@ -18,12 +19,12 @@
     [super viewDidLoad];
     [self setNavTitle:@"菜单"];
     [self getUserInfo];
-    [kNotificationCenter addObserver:self selector:@selector(getUserInfo) name:kEditUserNickNameRefreshTableView object:nil];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(getUserInfo) name:kEditUserNickNameRefreshTableView object:nil];
 }
 
 - (void)dealloc
 {
-    [kNotificationCenter removeObserver:self];
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
 }
 
 - (void) getUserInfo

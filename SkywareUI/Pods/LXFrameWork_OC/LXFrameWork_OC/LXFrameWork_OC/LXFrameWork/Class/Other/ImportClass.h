@@ -32,12 +32,14 @@
 #import "BaseStepViewController.h"
 #import "QRCodeViewController.h"
 #import "PlistTool.h"
+#import "PathTool"
 #import "BundleTool.h"
 #import "BaseNetworkTool.h"
 #import "BlockButton.h"
 #import "TimeButton.h"
 #import "AppDelegate.h"
 #import "LXSingleton.h"
+#import "LXFrameWorkConst.h"
 
 #import <FMDB.h>
 #import <PureLayout.h>
@@ -74,9 +76,6 @@
 
 #define kLINE_1_PX (1.0f / [UIScreen mainScreen].scale)
 #define MainDelegate  ((AppDelegate *)[UIApplication sharedApplication].delegate)
-
-
-#define kUserDataPath  [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:@"User.data"]
 
 // 通知
 #define kNotificationCenter [NSNotificationCenter defaultCenter]

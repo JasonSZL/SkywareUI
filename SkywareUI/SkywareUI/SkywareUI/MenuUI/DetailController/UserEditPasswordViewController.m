@@ -67,7 +67,7 @@
         
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             // 清除保存的用户名密码
-            [NSKeyedArchiver archiveRootObject:[[SkywareResult alloc] init] toFile:kUserDataPath];
+            [NSKeyedArchiver archiveRootObject:[[SkywareResult alloc] init] toFile:[PathTool getUserDataPath]];
             // 清除用户detoken
             SkywareInstanceModel * instance = [SkywareInstanceModel sharedSkywareInstanceModel];
             instance.token = nil;

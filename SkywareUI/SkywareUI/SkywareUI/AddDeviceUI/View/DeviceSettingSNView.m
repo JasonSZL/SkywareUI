@@ -7,7 +7,8 @@
 //
 
 #import "DeviceSettingSNView.h"
-
+#import <BaseDelegate.h>
+#define Delegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 @interface DeviceSettingSNView()<QRCodeViewControllerDelegate>
 
 @end
@@ -44,7 +45,7 @@
 - (IBAction)readQRCode:(UIButton *)sender {
     QRCodeViewController *readCode = [[QRCodeViewController alloc] init];
     readCode.delegate = self;
-    [MainDelegate.navigationController presentViewController:readCode animated:YES completion:nil];
+    [Delegate.navigationController presentViewController:readCode animated:YES completion:nil];
 }
 
 /**
@@ -80,12 +81,12 @@
 - (void)ReaderCode:(QRCodeViewController *)readerViewController didScanResult:(NSString *)result
 {
     self.codeTextField.text = result;
-    [MainDelegate.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [Delegate.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 - (void)ReaderCoderDidCancel:(QRCodeViewController *)readerViewController
 {
-    [MainDelegate.navigationController dismissViewControllerAnimated:YES completion:nil];
+    [Delegate.navigationController dismissViewControllerAnimated:YES completion:nil];
 }
 
 @end

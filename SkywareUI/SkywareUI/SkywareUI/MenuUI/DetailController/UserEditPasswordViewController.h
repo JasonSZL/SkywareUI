@@ -9,7 +9,8 @@
 #import "BaseViewController.h"
 #import "SkywareUIInstanceModel.h"
 #import "UserLoginViewController.h"
-#import <ImportClass.h>
+#import <UIWindow+Extension.h>
+#import <PathTool.h>
 
 @interface UserEditPasswordViewController : BaseViewController
 

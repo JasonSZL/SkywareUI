@@ -7,8 +7,6 @@
 //
 
 #import "UserLoginViewController.h"
-#import "SkywareUIInstanceModel.h"
-#import <ImportClass.h>
 
 @interface UserLoginViewController ()
 /*** 登录名 */
@@ -39,7 +37,7 @@
     self.password.text = @"";
     
     // 自动登录
-    SkywareResult *result = [NSKeyedUnarchiver unarchiveObjectWithFile:kUserDataPath];
+    SkywareResult *result = [NSKeyedUnarchiver unarchiveObjectWithFile:[PathTool getUserDataPath]];
     if (result.phone.length && result.password.length) { // 保存有用户名密码，跳转到首页
         [SVProgressHUD showWithStatus:@"自动登录中..."];
         NSMutableDictionary *param = [NSMutableDictionary dictionary];
@@ -74,7 +72,7 @@
         // 将用户信息保存到本地
         result.phone = self.phone.text;
         result.password = self.password.text;
-        [NSKeyedArchiver archiveRootObject:result toFile:kUserDataPath];
+        [NSKeyedArchiver archiveRootObject:result toFile:[PathTool getUserDataPath]];
         
         // 将用户token 保存到单例中
         SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];

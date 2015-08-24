@@ -7,6 +7,8 @@
 //
 
 #import "UserSettingPasswordView.h"
+#import <BaseDelegate.h>
+#define Delegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface UserSettingPasswordView ()
 /*** 密码 */
@@ -53,7 +55,7 @@
     [dict setObject:self.password.text forKey:@"login_pwd"];
     [SkywareUserManagement UserRegisterWithParamesers:dict Success:^(SkywareResult *result) {
         [SVProgressHUD showSuccessWithStatus:@"恭喜您!注册成功"];
-        [MainDelegate.navigationController popToRootViewControllerAnimated:YES];
+        [Delegate.navigationController popToRootViewControllerAnimated:YES];
     } failure:^(SkywareResult *result) {
         [SVProgressHUD showErrorWithStatus:@"网络不给力,请稍后重试"];
     }];

@@ -130,7 +130,7 @@
 {
     if (buttonIndex == 1) {
         // 清除保存的用户名密码
-        [NSKeyedArchiver archiveRootObject:[[SkywareResult alloc] init] toFile:kUserDataPath];
+        [NSKeyedArchiver archiveRootObject:[[SkywareResult alloc] init] toFile:[PathTool getUserDataPath]];
         // 清除用户detoken
         SkywareInstanceModel * instance = [SkywareInstanceModel sharedSkywareInstanceModel];
         instance.token = nil;
