@@ -58,17 +58,19 @@ install_resource()
   esac
 }
 if [[ "$CONFIGURATION" == "Debug" ]]; then
-  install_resource "HF_SmartLink/SmartLink/FrameWork/libSmartLinkStaticLib.a"
   install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
   install_resource "LXFrameWork_OC/LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/source/LXFrameWork.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SMS_SDK/SMS_SDK/en.lproj"
+  install_resource "SMS_SDK/SMS_SDK/zh-Hans.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 if [[ "$CONFIGURATION" == "Release" ]]; then
-  install_resource "HF_SmartLink/SmartLink/FrameWork/libSmartLinkStaticLib.a"
   install_resource "IQKeyboardManager/IQKeyBoardManager/Resources/IQKeyboardManager.bundle"
   install_resource "LXFrameWork_OC/LXFrameWork_OC/LXFrameWork_OC/LXFrameWork/source/LXFrameWork.bundle"
   install_resource "MJRefresh/MJRefresh/MJRefresh.bundle"
+  install_resource "SMS_SDK/SMS_SDK/en.lproj"
+  install_resource "SMS_SDK/SMS_SDK/zh-Hans.lproj"
   install_resource "SVProgressHUD/SVProgressHUD/SVProgressHUD.bundle"
 fi
 

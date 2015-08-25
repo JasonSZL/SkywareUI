@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "AddDeviceViewController.h"
 #import "SkywareUIInstance.h"
-#import "SMS_SDK.h"
+#import <SMS_SDK/SMS_SDK.h>
 #define SMS_SDKAppKey    @"888af4137d99"
 #define SMS_SDKAppSecret  @"907cae6bb1ecc40c41182c0109b61a21"
 #import <ImportClass.h>
@@ -36,6 +36,10 @@
     
     // 设置系统样式
     [self settingSystemStyle];
+    
+    // 设置假的 token
+    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
+    instance.token = @"afc5a01fd7534a1a9cd81d0efcc6c5f9";
     
     
     return YES;
