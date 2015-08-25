@@ -8,7 +8,11 @@
 
 #import "AppDelegate.h"
 #import "AddDeviceViewController.h"
-
+#import "SkywareUIInstance.h"
+#import "SMS_SDK.h"
+#define SMS_SDKAppKey    @"888af4137d99"
+#define SMS_SDKAppSecret  @"907cae6bb1ecc40c41182c0109b61a21"
+#import <ImportClass.h>
 @interface AppDelegate ()
 
 @end
@@ -18,13 +22,22 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    AddDeviceViewController *add = [[AddDeviceViewController alloc] init];
-    self.window.rootViewController = add;
-    [self.window makeKeyAndVisible];
+    // 设置 App_id
+    SkywareInstanceModel *skywareInstance = [SkywareInstanceModel sharedSkywareInstanceModel];
+    skywareInstance.app_id = 5;
     
-
+    // 设置弹出框后不可操作
+    [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
+    [SVProgressHUD setBackgroundColor:kRGBColor(230, 230, 230, 1)];
+    
+    // 启动ShareSDK 的短信功能
+    [SMS_SDK registerApp:SMS_SDKAppKey withSecret:SMS_SDKAppSecret];
+    [SMS_SDK enableAppContactFriends:NO];
+    
+    // 设置系统样式
+    [self settingSystemStyle];
+    
+    
     return YES;
 }
 
@@ -48,6 +61,16 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+
+#pragma mark - Method
+
+- (void) settingSystemStyle
+{
+    SkywareUIInstance *instance = [SkywareUIInstance sharedSkywareUIInstance];
+    instance.All_button_bgColor = kRGBColor(235, 86, 77, 1);
+    instance.User_view_bgColor = kRGBColor(236, 236, 236, 1);
 }
 
 @end

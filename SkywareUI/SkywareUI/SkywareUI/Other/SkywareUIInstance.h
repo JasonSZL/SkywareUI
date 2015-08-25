@@ -10,8 +10,8 @@
 #import <LXSingleton.h>
 #import <SkywareSDK.h>
 
-@interface SkywareUIInstanceModel : NSObject
-LXSingletonH(SkywareUIInstanceModel)
+@interface SkywareUIInstance : NSObject
+LXSingletonH(SkywareUIInstance)
 
 /***  所有页面View背景颜色 */
 @property (nonatomic,strong) UIColor *All_view_bgColor;

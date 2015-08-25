@@ -55,12 +55,14 @@
 		4E5FDAD41B8A011A00F7268D /* UserGetCodeView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB41B8A011A00F7268D /* UserGetCodeView.m */; };
 		4E5FDAD51B8A011A00F7268D /* UserManager.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB51B8A011A00F7268D /* UserManager.xib */; };
 		4E5FDAD61B8A011A00F7268D /* UserSettingPasswordView.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAB71B8A011A00F7268D /* UserSettingPasswordView.m */; };
-		4E5FDAD91B8A01B800F7268D /* SkywareUIInstanceModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAD81B8A01B800F7268D /* SkywareUIInstanceModel.m */; };
+		4E5FDAD91B8A01B800F7268D /* SkywareUIInstance.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDAD81B8A01B800F7268D /* SkywareUIInstance.m */; };
 		4E5FDADC1B8A01D800F7268D /* SkywareUIConst.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */; };
 		4E5FDADE1B8A028900F7268D /* libSmartLinkStaticLib.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDADD1B8A028900F7268D /* libSmartLinkStaticLib.a */; };
 		4E5FDAE01B8A02F200F7268D /* libicucore.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDADF1B8A02F200F7268D /* libicucore.dylib */; };
 		4E5FDAE21B8A02FB00F7268D /* libz.dylib in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDAE11B8A02FB00F7268D /* libz.dylib */; };
 		4E5FDAE41B8A030300F7268D /* MessageUI.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 4E5FDAE31B8A030300F7268D /* MessageUI.framework */; };
+		4EA76C651B8C032C00DCE823 /* AppViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EA76C641B8C032C00DCE823 /* AppViewController.m */; };
+		4EA76C681B8C037C00DCE823 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA76C671B8C037C00DCE823 /* Main.storyboard */; };
 		4EBC50CC1B87163F00A71618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC50CB1B87163F00A71618 /* Images.xcassets */; };
 		4EBC50DB1B87163F00A71618 /* SkywareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50DA1B87163F00A71618 /* SkywareUITests.m */; };
 		A49C92898C1788FCCD814C3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919A15180EE32CF42791E1A0 /* libPods.a */; };
@@ -156,14 +158,17 @@
 		4E5FDAB51B8A011A00F7268D /* UserManager.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = UserManager.xib; sourceTree = "<group>"; };
 		4E5FDAB61B8A011A00F7268D /* UserSettingPasswordView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserSettingPasswordView.h; sourceTree = "<group>"; };
 		4E5FDAB71B8A011A00F7268D /* UserSettingPasswordView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserSettingPasswordView.m; sourceTree = "<group>"; };
-		4E5FDAD71B8A01B800F7268D /* SkywareUIInstanceModel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUIInstanceModel.h; sourceTree = "<group>"; };
-		4E5FDAD81B8A01B800F7268D /* SkywareUIInstanceModel.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkywareUIInstanceModel.m; sourceTree = "<group>"; };
+		4E5FDAD71B8A01B800F7268D /* SkywareUIInstance.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUIInstance.h; sourceTree = "<group>"; };
+		4E5FDAD81B8A01B800F7268D /* SkywareUIInstance.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkywareUIInstance.m; sourceTree = "<group>"; };
 		4E5FDADA1B8A01D800F7268D /* SkywareUIConst.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUIConst.h; sourceTree = "<group>"; };
 		4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkywareUIConst.m; sourceTree = "<group>"; };
 		4E5FDADD1B8A028900F7268D /* libSmartLinkStaticLib.a */ = {isa = PBXFileReference; lastKnownFileType = archive.ar; name = libSmartLinkStaticLib.a; path = Pods/HF_SmartLink/SmartLink/FrameWork/libSmartLinkStaticLib.a; sourceTree = "<group>"; };
 		4E5FDADF1B8A02F200F7268D /* libicucore.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libicucore.dylib; path = usr/lib/libicucore.dylib; sourceTree = SDKROOT; };
 		4E5FDAE11B8A02FB00F7268D /* libz.dylib */ = {isa = PBXFileReference; lastKnownFileType = "compiled.mach-o.dylib"; name = libz.dylib; path = usr/lib/libz.dylib; sourceTree = SDKROOT; };
 		4E5FDAE31B8A030300F7268D /* MessageUI.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MessageUI.framework; path = System/Library/Frameworks/MessageUI.framework; sourceTree = SDKROOT; };
+		4EA76C631B8C032C00DCE823 /* AppViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AppViewController.h; sourceTree = "<group>"; };
+		4EA76C641B8C032C00DCE823 /* AppViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AppViewController.m; sourceTree = "<group>"; };
+		4EA76C671B8C037C00DCE823 /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
 		4EBC50BB1B87163F00A71618 /* SkywareUI.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SkywareUI.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBC50CB1B87163F00A71618 /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Images.xcassets; sourceTree = "<group>"; };
 		4EBC50D41B87163F00A71618 /* SkywareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkywareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -260,6 +265,7 @@
 		4E5FDA021B89FFFC00F7268D /* Main */ = {
 			isa = PBXGroup;
 			children = (
+				4EA76C661B8C037C00DCE823 /* Storyboard */,
 				4E5FDA031B89FFFC00F7268D /* Controller */,
 				4E5FDA041B89FFFC00F7268D /* Lib */,
 				4E5FDA0A1B89FFFC00F7268D /* Model */,
@@ -272,6 +278,8 @@
 		4E5FDA031B89FFFC00F7268D /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				4EA76C631B8C032C00DCE823 /* AppViewController.h */,
+				4EA76C641B8C032C00DCE823 /* AppViewController.m */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -409,8 +417,8 @@
 		4E5FDAA01B8A011A00F7268D /* Other */ = {
 			isa = PBXGroup;
 			children = (
-				4E5FDAD71B8A01B800F7268D /* SkywareUIInstanceModel.h */,
-				4E5FDAD81B8A01B800F7268D /* SkywareUIInstanceModel.m */,
+				4E5FDAD71B8A01B800F7268D /* SkywareUIInstance.h */,
+				4E5FDAD81B8A01B800F7268D /* SkywareUIInstance.m */,
 				4E5FDADA1B8A01D800F7268D /* SkywareUIConst.h */,
 				4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */,
 			);
@@ -469,6 +477,14 @@
 				4E5FDAB71B8A011A00F7268D /* UserSettingPasswordView.m */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		4EA76C661B8C037C00DCE823 /* Storyboard */ = {
+			isa = PBXGroup;
+			children = (
+				4EA76C671B8C037C00DCE823 /* Main.storyboard */,
+			);
+			path = Storyboard;
 			sourceTree = "<group>";
 		};
 		4EBC50B21B87163F00A71618 = {
@@ -614,6 +630,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				4E5FDAD51B8A011A00F7268D /* UserManager.xib in Resources */,
+				4EA76C681B8C037C00DCE823 /* Main.storyboard in Resources */,
 				4E5433CC1B8B158A00BFA012 /* smartlink_hint@2x.png in Resources */,
 				4E5433C01B8B152E00BFA012 /* icon_setting_scan@2x.png in Resources */,
 				4E5433C81B8B156800BFA012 /* cb_red_pressed@2x.png in Resources */,
@@ -706,10 +723,11 @@
 				4E5FDAD41B8A011A00F7268D /* UserGetCodeView.m in Sources */,
 				4E5FDAC91B8A011A00F7268D /* UserEditNickNameViewController.m in Sources */,
 				4E5FDAC11B8A011A00F7268D /* DeviceEditInfoViewController.m in Sources */,
+				4EA76C651B8C032C00DCE823 /* AppViewController.m in Sources */,
 				4E5FDAD61B8A011A00F7268D /* UserSettingPasswordView.m in Sources */,
 				4E5FDADC1B8A01D800F7268D /* SkywareUIConst.m in Sources */,
 				4E5FDAC61B8A011A00F7268D /* SystemFeedBackViewController.m in Sources */,
-				4E5FDAD91B8A01B800F7268D /* SkywareUIInstanceModel.m in Sources */,
+				4E5FDAD91B8A01B800F7268D /* SkywareUIInstance.m in Sources */,
 				4E5FDAB81B8A011A00F7268D /* AddDeviceViewController.m in Sources */,
 				4E5FDAC31B8A011A00F7268D /* DeviceManagerViewController.m in Sources */,
 				4E5FDAC01B8A011A00F7268D /* MenuViewController.m in Sources */,

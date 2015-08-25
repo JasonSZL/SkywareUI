@@ -34,7 +34,7 @@
     [super viewDidLoad];
     
     // 设置页面元素
-    SkywareUIInstanceModel *UIM = [SkywareUIInstanceModel sharedSkywareUIInstanceModel];
+    SkywareUIInstance *UIM = [SkywareUIInstance sharedSkywareUIInstance];
     self.getCodeBtn.defineColor = UIM.User_button_bgColor ==nil? UIM.All_button_bgColor :UIM.User_button_bgColor;
     [self.getCodeBtn setBackgroundColor:UIM.User_button_bgColor == nil? UIM.All_button_bgColor :UIM.User_button_bgColor];
     [self.confirmBtn setBackgroundColor:UIM.User_button_bgColor == nil? UIM.All_button_bgColor :UIM.User_button_bgColor];

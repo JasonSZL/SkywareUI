@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "SkywareUIInstanceModel.h"
+#import "SkywareUIInstance.h"
 #import "MessageCodeTool.h"
 #import "TimeButton.h"
 #import <NSString+RegularExpression.h>

@@ -17,7 +17,7 @@
 
 - (void)awakeFromNib
 {
-    SkywareUIInstanceModel *UIM = [SkywareUIInstanceModel sharedSkywareUIInstanceModel];
+    SkywareUIInstance *UIM = [SkywareUIInstance sharedSkywareUIInstance];
     [self.activationDeviceBtn setBackgroundColor:UIM.Device_button_bgColor == nil? UIM.All_button_bgColor :UIM.Device_button_bgColor];
     self.backgroundColor = UIM.Device_view_bgColor == nil? UIM.All_view_bgColor :UIM.Device_view_bgColor;
 }

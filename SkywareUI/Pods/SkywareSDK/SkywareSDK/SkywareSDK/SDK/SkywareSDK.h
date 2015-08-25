@@ -39,6 +39,9 @@
 /** 签名中需要的key(必填项)  */
 #define kSignature_key @"skyware"
 
+
+#define kUserDataPath  [[NSString applicationDocumentsDirectory] stringByAppendingPathComponent:@"User.data"]
+
 #import "SkywareDeviceUpdateInfoModel.h"
 #import "SkywareDeviceQueryInfoModel.h"
 #import "SkywareAddressWeatherModel.h"

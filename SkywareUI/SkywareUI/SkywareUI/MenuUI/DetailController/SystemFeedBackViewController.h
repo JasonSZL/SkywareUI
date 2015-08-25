@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "SkywareUIInstanceModel.h"
+#import "SkywareUIInstance.h"
 
 @interface SystemFeedBackViewController : BaseViewController
 

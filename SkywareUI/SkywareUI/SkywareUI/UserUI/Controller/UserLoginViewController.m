@@ -27,7 +27,7 @@
     self.navView.hidden = YES;
     
     // 设置页面元素
-    SkywareUIInstanceModel *UIM = [SkywareUIInstanceModel sharedSkywareUIInstanceModel];
+    SkywareUIInstance *UIM = [SkywareUIInstance sharedSkywareUIInstance];
     [_loginBtn setBackgroundColor:UIM.User_button_bgColor == nil? UIM.All_button_bgColor : UIM.User_button_bgColor];
     _loginLogo.image = UIM.User_loginView_logo;
     self.view.backgroundColor = UIM.User_view_bgColor == nil? UIM.All_view_bgColor :UIM.User_view_bgColor;

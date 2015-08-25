@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "SkywareUIInstanceModel.h"
+#import "SkywareUIInstance.h"
 #import "SkywareUIConst.h"
 
 @interface DeviceEditInfoViewController : BaseViewController

@@ -7,7 +7,7 @@
 //
 
 #import "BaseViewController.h"
-#import "SkywareUIInstanceModel.h"
+#import "SkywareUIInstance.h"
 #import "UserLoginViewController.h"
 #import <UIWindow+Extension.h>
 #import <PathTool.h>

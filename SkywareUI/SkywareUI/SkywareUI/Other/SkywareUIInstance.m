@@ -6,17 +6,17 @@
 //  Copyright (c) 2015年 skyware. All rights reserved.
 //
 
-#import "SkywareUIInstanceModel.h"
+#import "SkywareUIInstance.h"
 
-@implementation SkywareUIInstanceModel
-LXSingletonM(SkywareUIInstanceModel)
+@implementation SkywareUIInstance
+LXSingletonM(SkywareUIInstance)
 
 - (UIColor *)All_view_bgColor
 {
-    if (_All_button_bgColor == nil) {
+    if (_All_view_bgColor == nil) {
         return [UIColor whiteColor];
     }else{
-        return _All_button_bgColor;
+        return _All_view_bgColor;
     }
 }
 

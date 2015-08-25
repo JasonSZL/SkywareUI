@@ -28,7 +28,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        SkywareUIInstanceModel *UIM = [SkywareUIInstanceModel sharedSkywareUIInstanceModel];
+        SkywareUIInstance *UIM = [SkywareUIInstance sharedSkywareUIInstance];
         self.view.backgroundColor = UIM.Menu_view_bgColor == nil?UIM.All_view_bgColor : UIM.Menu_view_bgColor;
         [self.releaseUserBtn setBackgroundColor:UIM.User_button_bgColor == nil ? UIM.All_button_bgColor :UIM.User_button_bgColor];
         [self.finishBtn setBackgroundColor:UIM.User_button_bgColor == nil ? UIM.All_button_bgColor :UIM.User_button_bgColor];

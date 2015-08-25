@@ -26,7 +26,7 @@
 {
     self = [super initWithNibName:nibNameOrNil bundle:nibBundleOrNil];
     if (self) {
-        SkywareUIInstanceModel *UIM = [SkywareUIInstanceModel sharedSkywareUIInstanceModel];
+        SkywareUIInstance *UIM = [SkywareUIInstance sharedSkywareUIInstance];
         self.view.backgroundColor = UIM.Menu_view_bgColor == nil?UIM.All_view_bgColor : UIM.Menu_view_bgColor;
         self.imageView.image = UIM.Menu_about_img;
         if (UIM.company.length) {
