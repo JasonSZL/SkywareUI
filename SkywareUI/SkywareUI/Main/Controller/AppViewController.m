@@ -26,18 +26,13 @@
 
 - (void) setupData
 {
-    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"AddDevice" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"AddDevice" SubTitle:@"添加设备" ClickOption:^{
         AddDeviceViewController *add = [[AddDeviceViewController alloc] init];
         add.isAddDevice = YES;
         [self.navigationController pushViewController:add animated:YES];
     } AndDetailClass:nil];
     
-    BaseArrowCellItem *item2 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"UserLogin" SubTitle:nil ClickOption:^{
-        UserLoginViewController *loginRegister = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateViewControllerWithIdentifier:@"UserLoginViewController"];
-        [self.navigationController pushViewController:loginRegister animated:YES];
-    } AndDetailClass:nil];
-    
-    BaseArrowCellItem *item3 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"UserMenu" SubTitle:nil ClickOption:^{
+    BaseArrowCellItem *item2 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"UserMenu" SubTitle:@"菜单选项" ClickOption:^{
         SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
         if(!instance.token.length){
             [SVProgressHUD showErrorWithStatus:@"查看菜单请先登录"];
@@ -47,8 +42,7 @@
         [self.navigationController pushViewController:menu animated:YES];
     } AndDetailClass:nil];
     
-    
-    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item1,item2,item3]];
+    BaseCellItemGroup *group = [BaseCellItemGroup createGroupWithItem:@[item1,item2]];
     [self.dataList addObject:group];
     
 }
