@@ -7,6 +7,16 @@
 //
 
 #import "SkywareJSApiTool.h"
+#import "BaseDelegate.h"
+#import <CoreLocationTool.h>
+#import <UIWindow+Extension.h>
+#define KBaseDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
+
+@interface SkywareJSApiTool ()<UIActionSheetDelegate>
+{
+    CoreLocationTool *locationTool;
+}
+@end
 
 @implementation SkywareJSApiTool
 
@@ -17,11 +27,13 @@
  *
  *  @return 是否允许WebView 继续加载操作
  */
-- (BOOL) JSApiSubStringRequestWith:(NSURLRequest *) request
+- (BOOL) JSApiSubStringRequestWith:(NSURLRequest *) request WebView:(UIWebView *) webView DeviceInfo:(SkywareDeviceInfoModel *) deviceInfo;
 {
     NSString *urlStr = request.URL.absoluteString;
-    NSRange range = [urlStr rangeOfString:@"jsapi"];
+    NSString *jsStr = @"jsapi.skyware.com/";
+    NSRange range = [urlStr rangeOfString:jsStr];
     if (range.location != NSNotFound) {
+        urlStr = [urlStr substringFromIndex:range.location + range.length];
         NSArray *urlArray = [urlStr componentsSeparatedByString:@"/"];
         NSInteger count = urlArray.count;
         [urlArray enumerateObjectsUsingBlock:^(NSString *str, NSUInteger idx, BOOL *stop) {
@@ -32,13 +44,64 @@
                 sendModel.commandv = [urlArray[count - 1] decodeFromPercentEscapeString];
                 [self sendCmdToDeviceWith:sendModel];
                 *stop = YES;
-            }else if ([str isEqualToString:@"getBindDevicesInfo"]){
-                // 获取设备列表，暂时忽略
+            }else if ([str isEqualToString:@"getCurrentDeviceInfo"]){ // 获取设备列表某个Cell信息
+                NSRange range = [urlStr rangeOfString:@"type/"];
+                NSArray *typeArray = [[urlStr substringFromIndex:range.length + range.location] componentsSeparatedByString:@"/"];
+                [self getMethodWithTypeArray:typeArray WebView:webView WithDeviceInfo:deviceInfo];
+                *stop = YES;
+            }else if([str isEqualToString:@"goback"]){
+                [KBaseDelegate.navigationController popViewControllerAnimated:YES];
+            }else if ([str isEqualToString:@"gomenu"]){
+                [self showMenuActionSheet];
+            }else if ([str isEqualToString:@"goshare"]){
+                [SVProgressHUD showSuccessWithStatus:@"敬请期待!"];
             }
         }];
         return NO;
     }
     return YES;
+}
+
+- (void) showMenuActionSheet
+{
+    UIActionSheet *seet =  [[UIActionSheet alloc] initWithTitle:@"更多" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"修改设备名称",@"检查固件升级",@"解除连接",@"反馈", nil] ;
+    
+    [seet showInView:[UIWindow getCurrentWindow]];
+    
+}
+
+- (void) getMethodWithTypeArray:(NSArray *) typeArray WebView:(UIWebView *) webView WithDeviceInfo:(SkywareDeviceInfoModel *) deviceInfo
+{
+    [typeArray enumerateObjectsUsingBlock:^(NSString *typeStr, NSUInteger idx, BOOL *stop) {
+        NSInteger type = [typeStr integerValue];
+        switch (type) {
+            case getDeviceInfo:
+            {
+                [self onGotCurDevInfoJsonStr:[deviceInfo JSONString]  Type:typeStr  ToWebView:webView];
+            }
+                break;
+            case getWeather:
+            {
+                locationTool = [[CoreLocationTool alloc] init];
+                [locationTool getLocation:^(CLLocation *location) {
+                    [locationTool reverseGeocodeLocation:location userAddress:^(UserAddressModel *userAddress){
+                        SkywareWeatherModel *model = [[SkywareWeatherModel alloc] init];
+                        model.province = userAddress.State;
+                        model.city = userAddress.City;
+                        model.district = userAddress.SubLocality;
+                        [SkywareOthersManagement UserAddressWeatherParamesers:model Success:^(SkywareResult *result) {
+                            [self onGotCurDevInfoJsonStr:[result.result JSONString]  Type:typeStr  ToWebView:webView];
+                        } failure:^(SkywareResult *result) {
+                            NSLog(@"%@",result);
+                        }];
+                    }];
+                }];
+            }
+                break;
+            default:
+                break;
+        }
+    }];
 }
 
 /**
@@ -73,9 +136,10 @@
  *  @param message 错误信息
  *  @param webView 推送到 WebView
  */
-- (void)onGotCurDevInfoJsonStr:(NSString *) jsonStr Code:(NSString *) code Message:(NSString *) message ToWebView:(UIWebView *) webView
+- (void)onGotCurDevInfoJsonStr:(NSString *) jsonStr Type:(NSString *) type ToWebView:(UIWebView *) webView
 {
-    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"onGotCurDevInfo('%@','%@','%@')",jsonStr,code,message]];
+    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"onGotCurDevInfo('%@','%@')",jsonStr,type]];
+    //    [webView stringByEvaluatingJavaScriptFromString:[NSString stringWithFormat:@"ceshi('%@')",@"ceshi"]];
 }
 
 /**
@@ -108,7 +172,7 @@
     query.id = instance.device_id;
     [SkywareDeviceManagement DeviceQueryInfo:query Success:^(SkywareResult *result) {
         httpResult = result;
-        [self onGotCurDevInfoJsonStr:[result.result JSONString] Code:nil Message:nil ToWebView:webView];
+        [self onGotCurDevInfoJsonStr:[result.result JSONString] Type:nil ToWebView:webView];
         [SVProgressHUD dismiss];
     } failure:^(SkywareResult *result) {
         httpResult  = nil;
