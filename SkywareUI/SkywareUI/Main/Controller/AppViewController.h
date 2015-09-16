@@ -6,8 +6,8 @@
 //  Copyright (c) 2015年 skyware. All rights reserved.
 //
 
-#import "BaseTableViewController.h"
+#include "BaseCellTableViewController.h"
 
-@interface AppViewController : BaseTableViewController
+@interface AppViewController : BaseCellTableViewController
 
 @end

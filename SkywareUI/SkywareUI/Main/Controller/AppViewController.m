@@ -12,6 +12,8 @@
 #import "UserLoginViewController.h"
 #import "MenuViewController.h"
 
+#define SYSTEM_VERSION_LESS_THAN(v)([[[UIDevice currentDevice] systemVersion] compare:v options:NSNumericSearch] == NSOrderedAscending)
+
 @interface AppViewController ()
 
 @end
@@ -22,6 +24,22 @@
     [super viewDidLoad];
     [self setNavTitle:@"SkywareUI"];
     [self setupData];
+}
+
+- (void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        self.tableView.y = 64;
+    }
+}
+
+- (void)viewWillAppear:(BOOL)animated
+{
+    [super viewWillAppear:animated];
+    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
+        self.tableView.y = 64;
+    }
 }
 
 - (void) setupData
