@@ -26,22 +26,6 @@
     [self setupData];
 }
 
-- (void)viewDidAppear:(BOOL)animated
-{
-    [super viewDidAppear:animated];
-    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
-        self.tableView.y = 64;
-    }
-}
-
-- (void)viewWillAppear:(BOOL)animated
-{
-    [super viewWillAppear:animated];
-    if (SYSTEM_VERSION_LESS_THAN(@"8.0")) {
-        self.tableView.y = 64;
-    }
-}
-
 - (void) setupData
 {
     BaseArrowCellItem *item1 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"AddDevice" SubTitle:@"添加设备" ClickOption:^{

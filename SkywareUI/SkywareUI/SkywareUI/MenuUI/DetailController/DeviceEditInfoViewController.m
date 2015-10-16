@@ -93,6 +93,7 @@
     update.device_name = self.device_name.text;
     update.device_lock = [NSString stringWithFormat:@"%d",!self.switchBtn.isOn];
     [SkywareDeviceManagement DeviceUpdateDeviceInfo:update Success:^(SkywareResult *result) {
+        [SVProgressHUD showSuccessWithStatus:@"修改设备信息成功"];
         [self.navigationController popViewControllerAnimated:YES];
         [[NSNotificationCenter defaultCenter] postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
     } failure:^(SkywareResult *result) {
