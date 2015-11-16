@@ -85,6 +85,7 @@
             [SVProgressHUD showErrorWithStatus:kMessageUserNotRegister];
             return ;
         }
+        //用户名密码或密码错误
         [SVProgressHUD showErrorWithStatus:kMessageUserNameOrPasswordError];
     }];
 }

@@ -33,6 +33,7 @@
 - (IBAction)activateDeviceBtnClick:(UIButton *)sender {
     if (self.codeTextField.text.length) {
         [self.codeTextField resignFirstResponder];
+        [SVProgressHUD show];
         [SkywareDeviceManagement DeviceVerifySN:self.codeTextField.text Success:^(SkywareResult *result) {
             [self queryDeviceMessage];
         } failure:^(SkywareResult *result) {

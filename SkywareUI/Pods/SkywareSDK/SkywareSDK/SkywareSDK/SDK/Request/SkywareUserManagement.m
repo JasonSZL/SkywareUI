@@ -19,7 +19,7 @@
     [SkywareHttpTool HttpToolGetWithUrl:UserCheckId paramesers:parameser requestHeaderField:nil SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure]; // message = 200 找到 = 已经注册过
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -29,7 +29,7 @@
     [SkywareHttpTool HttpToolGetWithUrl:User paramesers:parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -41,7 +41,7 @@
     [SkywareHttpTool HttpToolPostWithUrl:UserRegisterURL paramesers:dict requestHeaderField:nil SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -53,7 +53,7 @@
     [SkywareHttpTool HttpToolPostWithUrl:UserLoginURL paramesers:dict requestHeaderField:nil SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -63,9 +63,10 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionaryWithDictionary:parameser];
     [dict setObject: @(instance.app_id) forKey:@"app_id"];
     [SkywareHttpTool HttpToolPostWithUrl:UserRetrievePassword paramesers:dict requestHeaderField:nil SuccessJson:^(id json) {
-        [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];    } failure:^(NSError *error) {
-            
-        }];
+        [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
+    } failure:^(NSError *error) {
+        [SkywareHttpTool ErrorLogDispose:error];
+    }];
 }
 
 + (void)UserEditUserWithParamesers:(NSDictionary *)parameser Success:(void (^)(SkywareResult *))success failure:(void (^)(SkywareResult *))failure
@@ -74,7 +75,7 @@
     [SkywareHttpTool HttpToolPutWithUrl:User paramesers:parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -84,7 +85,7 @@
     [SkywareHttpTool HttpToolPutWithUrl:UserPassword paramesers:parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -94,7 +95,7 @@
     [SkywareHttpTool HttpToolUploadWithUrl:UserUploadIcon paramesers:@{@"token":instance.token} requestHeaderField:@{@"token":instance.token}  Data:UIImagePNGRepresentation(img) Name:@"file" FileName:fileName MainType:@"image/gif" SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -107,7 +108,7 @@
     [SkywareHttpTool HttpToolPostWithUrl:UserFeedBack paramesers:model.keyValues requestHeaderField:@{@"token":instance.token}  SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 

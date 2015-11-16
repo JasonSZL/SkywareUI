@@ -27,7 +27,7 @@
     [SkywareHttpTool HttpToolGetWithUrl:DeviceCheckSN paramesers:param requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -35,11 +35,10 @@
 {
     SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
     NSString *url = [NSString stringWithFormat:@"%@/%@",DeviceUpdateInfo,updateModel.device_mac];
-    NSLog(@"%@",updateModel.keyValues);
     [SkywareHttpTool HttpToolPutWithUrl:url paramesers:updateModel.keyValues requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -62,7 +61,7 @@
     [SkywareHttpTool HttpToolGetWithUrl:DeviceQueryInfo paramesers: parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
     
 }
@@ -73,7 +72,7 @@
     [SkywareHttpTool HttpToolPostWithUrl:DeviceBindUser paramesers:parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -83,7 +82,7 @@
     [SkywareHttpTool HttpToolDeleteWithUrl:DeviceReleaseUser paramesers:parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -93,7 +92,7 @@
     [SkywareHttpTool HttpToolGetWithUrl:DeviceGetAllDevices paramesers:nil requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
@@ -103,12 +102,12 @@
     [SkywareHttpTool HttpToolPostWithUrl:DevicePushCMD paramesers:parameser requestHeaderField:@{@"token":instance.token} SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
-        
+        [SkywareHttpTool ErrorLogDispose:error];
     }];
 }
 
 /**
- *  发送指令
+ *  发送指令 json
  */
 +(void)DevicePushCMDWithData:(NSArray *)data
 {
@@ -125,9 +124,29 @@
         [SVProgressHUD dismiss];
     }];
 }
+/**
+ *  发送指令 二进制指令
+ */
++(void) DevicePushCMDWithEncodeData:(NSString *)data
+{
+    NSData *sampleData = [data hexToBytes];
+    NSString * encodeStr = [sampleData base64EncodedStringWithOptions:0]; //进行base64位编码
+    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
+    NSMutableDictionary *params = [NSMutableDictionary dictionary];
+    if (!instance) return;
+    [params setObject: instance.device_id forKey:@"device_id"];
+    [params setObject:[SkywareDeviceManagement controlCommandvWithEncodedString:encodeStr] forKey:@"commandv"];
+    [SkywareDeviceManagement DevicePushCMD:params Success:^(SkywareResult *result) {
+        NSLog(@"指令发送成功---%@",params);
+        [SVProgressHUD dismiss];
+    } failure:^(SkywareResult *result) {
+        NSLog(@"指令发送失败");
+        [SVProgressHUD dismiss];
+    }];
+}
 
 /**
- *  拼接指令串
+ *  拼接指令串 json 格式发送
  */
 +(NSMutableString *)controlCommandvWithArray:(NSArray *)data
 {
@@ -146,26 +165,8 @@
     return commandv;
 }
 
-+(void) DevicePushCMDWithEncodeData:(NSString *)data
-{
-    NSData* sampleData = [data dataUsingEncoding:NSUTF8StringEncoding];
-    NSString * encodeStr = [sampleData base64EncodedStringWithOptions:0]; //进行base64位编码
-    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-    NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    if (!instance) return;
-    [params setObject: instance.device_id forKey:@"device_id"];
-    [params setObject:[SkywareDeviceManagement controlCommandvWithEncodedString:encodeStr] forKey:@"commandv"];
-    [SkywareDeviceManagement DevicePushCMD:params Success:^(SkywareResult *result) {
-        NSLog(@"指令发送成功---%@",params);
-        [SVProgressHUD dismiss];
-    } failure:^(SkywareResult *result) {
-        NSLog(@"指令发送失败");
-        [SVProgressHUD dismiss];
-    }];
-}
-
 /**
- *  拼接指令串
+ *  拼接指令串  二进制指令
  */
 +(NSMutableString *)controlCommandvWithEncodedString:(NSString *)encodeData
 {
@@ -173,8 +174,9 @@
     NSMutableString  *commandv ;
     commandv= [NSMutableString stringWithString:@"{\"sn\":"];
     [commandv appendFormat: @"%ld",instance.sn];
-    [commandv appendFormat:@",\"cmd\":\"%@\",\"data\":[",encodeData];
-    [commandv appendString:@"]}\n"];
+    [commandv appendString:@",\"cmd\":\"download\",\"data\":[\""];
+    [commandv appendString:encodeData];
+    [commandv appendString:@"\"]}\n"];
     return commandv;
 }
 

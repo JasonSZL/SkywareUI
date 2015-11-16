@@ -199,6 +199,7 @@
     if (self.code.length) {
         updateInfo.device_sn = self.code;
     }
+    [SVProgressHUD show];
     [SkywareDeviceManagement DeviceUpdateDeviceInfo:updateInfo Success:^(SkywareResult *result) {
         // 用户设备绑定
         [self deviceBindUser];

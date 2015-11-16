@@ -31,6 +31,7 @@
         return;
     }
     if ([self.phoneText.text isPhoneNumber]) {
+        [SVProgressHUD show];
         [SkywareUserManagement UserVerifyLoginIdExistsWithLoginid:self.phoneText.text Success:^(SkywareResult *result) {
             [SVProgressHUD showErrorWithStatus:kMessageUserAlreadyRegister];
         } failure:^(SkywareResult *result) {

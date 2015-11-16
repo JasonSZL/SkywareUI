@@ -73,6 +73,7 @@
 - (void)alertView:(UIAlertView *)alertView clickedButtonAtIndex:(NSInteger)buttonIndex
 {
     if (buttonIndex == 1) {
+        [SVProgressHUD show];
         [SkywareDeviceManagement DeviceReleaseUser:@[_DeviceInfo.device_id] Success:^(SkywareResult *result) {
             [SVProgressHUD dismiss];
             [[NSNotificationCenter defaultCenter] postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
@@ -92,6 +93,7 @@
     update.device_mac = _DeviceInfo.device_mac;
     update.device_name = self.device_name.text;
     update.device_lock = [NSString stringWithFormat:@"%d",!self.switchBtn.isOn];
+    [SVProgressHUD show];
     [SkywareDeviceManagement DeviceUpdateDeviceInfo:update Success:^(SkywareResult *result) {
         [SVProgressHUD showSuccessWithStatus:@"修改设备信息成功"];
         [self.navigationController popViewControllerAnimated:YES];

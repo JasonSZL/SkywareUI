@@ -152,6 +152,7 @@
     if (!instance) return;
     [params setObject: instance.device_id forKey:@"device_id"];
     [params setObject: send.commandv forKey:@"commandv"];
+    [SVProgressHUD show];
     [SkywareDeviceManagement DevicePushCMD:params Success:^(SkywareResult *result) {
         NSLog(@"指令发送成功---%@",params);
         [SVProgressHUD dismiss];
@@ -166,6 +167,7 @@
  */
 - (SkywareResult *)queryDeviceInfoToWebView:(UIWebView *) webView
 {
+    [SVProgressHUD show];
     __block typeof(SkywareResult) *httpResult;
     SkywareDeviceQueryInfoModel *query = [[SkywareDeviceQueryInfoModel alloc] init];
     SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];

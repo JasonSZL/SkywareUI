@@ -105,7 +105,7 @@
 
 - (void) uploadUserIconWithImage:(UIImage *) img
 {
-    
+    [SVProgressHUD show];
     [SkywareUserManagement UserUploadIconWithParamesers:nil Icon:[img scaleToSize:CGSizeMake(100, 100)] FileName:@"file.png" Success:^(SkywareResult *result) {
         self.user_img = result.icon_url;
         [self addAccountData];
@@ -119,10 +119,11 @@
 
 - (void) updateuserPhotoWithUrl:(NSString *) url
 {
+    [SVProgressHUD show];
     [SkywareUserManagement UserEditUserWithParamesers:@{@"user_img":url} Success:^(SkywareResult *result) {
         [[NSNotificationCenter defaultCenter] postNotificationName:kEditUserNickNameRefreshTableView object:nil];
     } failure:^(SkywareResult *result) {
-        
+        [SVProgressHUD showErrorWithStatus:@"上传头像失败"];
     }];
 }
 

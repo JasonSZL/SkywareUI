@@ -108,7 +108,6 @@
         return;
     }
     [SVProgressHUD showWithStatus:kMessageUserChangePassword];
-    
     [SkywareUserManagement UserVerifyLoginIdExistsWithLoginid:self.phone.text Success:^(SkywareResult *result) {
         [self VerifyCode];
     } failure:^(SkywareResult *result) { // 如果是200 说明已经存在可以找回密码
@@ -121,6 +120,7 @@
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setObject:self.phone.text forKey:@"login_id"];
     [param setObject:self.password.text forKey:@"login_pwd"];
+    [SVProgressHUD show];
     [SkywareUserManagement UserRetrievePasswordWithParamesers:param Success:^(SkywareResult *result) {
         [SVProgressHUD showSuccessWithStatus:kMessageUserChangePasswordSuccess];
         [self.navigationController popToRootViewControllerAnimated:YES];

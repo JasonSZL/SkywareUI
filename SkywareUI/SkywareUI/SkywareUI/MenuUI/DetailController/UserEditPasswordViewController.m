@@ -61,6 +61,7 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:self.Password.text forKey:@"login_pwd"];
     [params setObject:self.oldPassword.text forKey:@"login_pwd_old"];
+    [SVProgressHUD show];
     [SkywareUserManagement UserEditUserPasswordWithParamesers:params Success:^(SkywareResult *result) {
         
         [SVProgressHUD showSuccessWithStatus:@"密码修改成功"];

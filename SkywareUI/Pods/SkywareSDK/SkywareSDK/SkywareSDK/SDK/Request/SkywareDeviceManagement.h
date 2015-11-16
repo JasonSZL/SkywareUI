@@ -47,12 +47,12 @@
 + (void) DevicePushCMD:(NSDictionary *) parameser Success:(void(^)(SkywareResult *result)) success failure:(void (^)(SkywareResult *result)) failure;
 
 /**
- *  大循环中发送指令控制设备
+ *  大循环中发送指令控制设备 json 格式发送
  */
 + (void) DevicePushCMDWithData:(NSArray *)data;
 
 /**
- *  大循环中----发送二进制指令
+ *  大循环中发送指令控制设备  二进制指令
  *
  *  @param data base64编码前的原始NSString指令
  */

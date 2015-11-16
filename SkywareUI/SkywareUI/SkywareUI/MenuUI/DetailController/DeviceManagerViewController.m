@@ -29,6 +29,7 @@
 - (void)getUserAllDevice
 {
     [self.dataList removeAllObjects];
+    [SVProgressHUD show];
     [SkywareDeviceManagement DeviceGetAllDevicesSuccess:^(SkywareResult *result) {
         NSArray *dataArray = [SkywareDeviceInfoModel objectArrayWithKeyValuesArray:result.result];
         [self deviceInfoWithArray:dataArray];

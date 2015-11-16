@@ -29,6 +29,7 @@
 
 - (void) getUserInfo
 {
+    [SVProgressHUD show];
     [SkywareUserManagement UserGetUserWithParamesers:nil Success:^(SkywareResult *result) {
         SkywareUserInfoModel *userInfo = [SkywareUserInfoModel objectWithKeyValues:[result.result firstObject]];
         [SVProgressHUD dismiss];

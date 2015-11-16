@@ -53,6 +53,7 @@
     NSMutableDictionary *dict = [NSMutableDictionary dictionary];
     [dict setObject:phone forKey:@"login_id"];
     [dict setObject:self.password.text forKey:@"login_pwd"];
+    [SVProgressHUD show];
     [SkywareUserManagement UserRegisterWithParamesers:dict Success:^(SkywareResult *result) {
         [SVProgressHUD showSuccessWithStatus:kMessageUserRegisterSuccess];
         [Delegate.navigationController popToRootViewControllerAnimated:YES];

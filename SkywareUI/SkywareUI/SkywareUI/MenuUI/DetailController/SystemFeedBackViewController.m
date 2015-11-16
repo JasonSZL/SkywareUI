@@ -54,6 +54,7 @@
     SkywareUserFeedBackModel *feedBack = [[SkywareUserFeedBackModel alloc] init];
     feedBack.title = self.titleView.text;
     feedBack.content = self.contentTextView.text;
+    [SVProgressHUD show];
     [SkywareUserManagement UserFeedBackWithParamesers:feedBack Success:^(SkywareResult *result) {
         [self.navigationController popViewControllerAnimated:YES];
         [SVProgressHUD showSuccessWithStatus:@"感谢您的反馈，我们会尽快处理"];

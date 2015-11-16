@@ -40,6 +40,7 @@
         [SVProgressHUD showErrorWithStatus:@"请输入新昵称"];
         return;
     }
+    [SVProgressHUD show];
     [SkywareUserManagement UserEditUserWithParamesers:@{@"user_name":self.user_nickName.text} Success:^(SkywareResult *result) {
         [self.navigationController popViewControllerAnimated:YES];
         [SVProgressHUD showSuccessWithStatus:@"修改成功"];
