@@ -20,6 +20,9 @@
 
 @end
 
+/**
+ *  用户登录
+ */
 @implementation UserLoginViewController
 
 - (void)viewDidLoad {
@@ -39,19 +42,11 @@
     // 自动登录
     SkywareResult *result = [NSKeyedUnarchiver unarchiveObjectWithFile:[PathTool getUserDataPath]];
     if (result.phone.length && result.password.length) { // 保存有用户名密码，跳转到首页
-        [SVProgressHUD showWithStatus:@"自动登录中..."];
         NSMutableDictionary *param = [NSMutableDictionary dictionary];
         [param setObject:result.phone forKey:@"login_id"];
         [param setObject:result.password forKey:@"login_pwd"];
-        [SkywareUserManagement UserLoginWithParamesers:param Success:^(SkywareResult *result) {
-            // 将用户token 保存到单例中
-            SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-            instance.token = result.token;
-            [SVProgressHUD dismiss];
-            [UIWindow changeWindowRootViewController:[[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController] animated:YES];
-        } failure:^(SkywareResult *result) {
-            [SVProgressHUD showErrorWithStatus:@"自动登录失败,请重新输入用户名密码"];
-        }];
+        [SVProgressHUD showWithStatus:kMessageUserAutoLogin];   // 自动登陆
+        [self userLoginWithparams:param];
     }
 }
 
@@ -64,11 +59,16 @@
         [SVProgressHUD showErrorWithStatus:@"请输入密码"];
         return;
     }
-    [SVProgressHUD showWithStatus:@"登录中..."];
     NSMutableDictionary *param = [NSMutableDictionary dictionary];
     [param setObject:self.phone.text forKey:@"login_id"];
     [param setObject:self.password.text forKey:@"login_pwd"];
-    [SkywareUserManagement UserLoginWithParamesers:param Success:^(SkywareResult *result) {
+    [SVProgressHUD showWithStatus:kMessageUserLogin];
+    [self userLoginWithparams:param];
+}
+
+- (void) userLoginWithparams:(NSDictionary *) params
+{
+    [SkywareUserManagement UserLoginWithParamesers:params Success:^(SkywareResult *result) {
         // 将用户信息保存到本地
         result.phone = self.phone.text;
         result.password = self.password.text;
@@ -82,10 +82,10 @@
         [UIWindow changeWindowRootViewController:[[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController] animated:YES];
     } failure:^(SkywareResult *result) {
         if ([result.message isEqualToString:@"404"]) {
-            [SVProgressHUD showErrorWithStatus:@"您还没有注册，请先注册"];
+            [SVProgressHUD showErrorWithStatus:kMessageUserNotRegister];
             return ;
         }
-        [SVProgressHUD showErrorWithStatus:@"用户名密码或密码错误"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserNameOrPasswordError];
     }];
 }
 

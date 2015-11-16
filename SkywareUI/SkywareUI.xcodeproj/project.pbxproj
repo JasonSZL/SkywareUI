@@ -59,6 +59,7 @@
 		4EA76C681B8C037C00DCE823 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EA76C671B8C037C00DCE823 /* Home.storyboard */; };
 		4EBC50CC1B87163F00A71618 /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 4EBC50CB1B87163F00A71618 /* Images.xcassets */; };
 		4EBC50DB1B87163F00A71618 /* SkywareUITests.m in Sources */ = {isa = PBXBuildFile; fileRef = 4EBC50DA1B87163F00A71618 /* SkywareUITests.m */; };
+		4ED017121BF48D40003A420F /* SkywareUIMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 4ED017111BF48D40003A420F /* SkywareUIMessage.m */; };
 		A49C92898C1788FCCD814C3B /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 919A15180EE32CF42791E1A0 /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -159,6 +160,8 @@
 		4EBC50D41B87163F00A71618 /* SkywareUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SkywareUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		4EBC50D91B87163F00A71618 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		4EBC50DA1B87163F00A71618 /* SkywareUITests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SkywareUITests.m; sourceTree = "<group>"; };
+		4ED017101BF48D40003A420F /* SkywareUIMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SkywareUIMessage.h; sourceTree = "<group>"; };
+		4ED017111BF48D40003A420F /* SkywareUIMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SkywareUIMessage.m; sourceTree = "<group>"; };
 		88A34338B81563D81690350C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		919A15180EE32CF42791E1A0 /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		CB25A093043C5F64FE15CE60 /* Pods.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.release.xcconfig; path = "Pods/Target Support Files/Pods/Pods.release.xcconfig"; sourceTree = "<group>"; };
@@ -369,6 +372,8 @@
 				4E5FDAD81B8A01B800F7268D /* SkywareUIInstance.m */,
 				4E5FDADA1B8A01D800F7268D /* SkywareUIConst.h */,
 				4E5FDADB1B8A01D800F7268D /* SkywareUIConst.m */,
+				4ED017101BF48D40003A420F /* SkywareUIMessage.h */,
+				4ED017111BF48D40003A420F /* SkywareUIMessage.m */,
 			);
 			path = Other;
 			sourceTree = "<group>";
@@ -669,6 +674,7 @@
 				4E5FDABB1B8A011A00F7268D /* DeviceResetView.m in Sources */,
 				4E5FDAD41B8A011A00F7268D /* UserGetCodeView.m in Sources */,
 				4E5FDAC91B8A011A00F7268D /* UserEditNickNameViewController.m in Sources */,
+				4ED017121BF48D40003A420F /* SkywareUIMessage.m in Sources */,
 				4E5FDAC11B8A011A00F7268D /* DeviceEditInfoViewController.m in Sources */,
 				4EA76C651B8C032C00DCE823 /* AppViewController.m in Sources */,
 				4E5FDAD61B8A011A00F7268D /* UserSettingPasswordView.m in Sources */,

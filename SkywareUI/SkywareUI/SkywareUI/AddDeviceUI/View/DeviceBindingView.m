@@ -74,7 +74,7 @@
 
 - (IBAction)commitBtnClick:(UIButton *)sender {
     if (!self.name.text.length) {
-        [SVProgressHUD showErrorWithStatus:@"请填写设备名称"];
+        [SVProgressHUD showErrorWithStatus:kMessageDeviceWriteDeviceName];
         return;
     }
     if (self.otherOption) {

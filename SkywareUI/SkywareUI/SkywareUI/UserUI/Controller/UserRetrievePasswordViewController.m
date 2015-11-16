@@ -27,7 +27,9 @@
 @property (weak, nonatomic) IBOutlet UIButton *confirmBtn;
 
 @end
-
+/**
+ *  找回密码
+ */
 @implementation UserRetrievePasswordViewController
 
 - (void)viewDidLoad {
@@ -54,12 +56,12 @@
         return;
     }
     
-    [SVProgressHUD showWithStatus:@"努力获取中..."];
+    [SVProgressHUD showWithStatus:kMessageUserGetCodeLoad];
     [MessageCodeTool getMessageCodeWithPhone:self.phone.text Zone:nil Success:^{
         [self.getCodeBtn startWithTimer:60];
         [SVProgressHUD dismiss];
     } Error:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:@"获取验证码失败，请稍后重试"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserGetCodeError];
     }];
 }
 
@@ -67,7 +69,7 @@
     [self.view endEditing:YES];
     if(self.code.text.length!=4)
     {
-        [SVProgressHUD showInfoWithStatus:@"请输入4位验证码"];
+        [SVProgressHUD showInfoWithStatus:kMessageUserWriteCode];
         return;
     }else{
         [self VerifyCode];
@@ -102,15 +104,15 @@
     
     if(self.code.text.length!=4)
     {
-        [SVProgressHUD showInfoWithStatus:@"请输入4位验证码"];
+        [SVProgressHUD showInfoWithStatus:kMessageUserWriteCode];
         return;
     }
-    [SVProgressHUD showWithStatus:@"密码修改中..."];
+    [SVProgressHUD showWithStatus:kMessageUserChangePassword];
     
     [SkywareUserManagement UserVerifyLoginIdExistsWithLoginid:self.phone.text Success:^(SkywareResult *result) {
         [self VerifyCode];
     } failure:^(SkywareResult *result) { // 如果是200 说明已经存在可以找回密码
-        [SVProgressHUD showErrorWithStatus:@"该用户还未注册"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserNotRegister];
     }];
 }
 
@@ -120,10 +122,10 @@
     [param setObject:self.phone.text forKey:@"login_id"];
     [param setObject:self.password.text forKey:@"login_pwd"];
     [SkywareUserManagement UserRetrievePasswordWithParamesers:param Success:^(SkywareResult *result) {
-        [SVProgressHUD showSuccessWithStatus:@"密码修改成功"];
+        [SVProgressHUD showSuccessWithStatus:kMessageUserChangePasswordSuccess];
         [self.navigationController popToRootViewControllerAnimated:YES];
     } failure:^(SkywareResult *result) {
-        [SVProgressHUD showErrorWithStatus:@"密码修改失败,请稍后重试"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserChangePasswordError];
     }];
 }
 
@@ -132,7 +134,7 @@
     [MessageCodeTool commitVerifyCode:self.code.text Success:^{
         [self changePassword];
     } Error:^{
-        [SVProgressHUD showErrorWithStatus:@"验证码有误,请重新输入"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserWriteCodeError];
     }];
 }
 

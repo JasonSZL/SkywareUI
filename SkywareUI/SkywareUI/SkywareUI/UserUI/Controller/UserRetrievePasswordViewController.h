@@ -12,6 +12,9 @@
 #import "TimeButton.h"
 #import <NSString+RegularExpression.h>
 
+/**
+ *  找回密码
+ */
 @interface UserRetrievePasswordViewController : BaseViewController
 
 @end

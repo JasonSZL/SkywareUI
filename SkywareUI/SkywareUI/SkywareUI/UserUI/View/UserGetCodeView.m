@@ -32,7 +32,7 @@
     }
     if ([self.phoneText.text isPhoneNumber]) {
         [SkywareUserManagement UserVerifyLoginIdExistsWithLoginid:self.phoneText.text Success:^(SkywareResult *result) {
-            [SVProgressHUD showErrorWithStatus:@"该手机号已被注册"];
+            [SVProgressHUD showErrorWithStatus:kMessageUserAlreadyRegister];
         } failure:^(SkywareResult *result) {
             [self getCode];
         }];
@@ -43,14 +43,14 @@
 
 - (void) getCode
 {
-    [SVProgressHUD showWithStatus:@"努力获取中..."];
+    [SVProgressHUD showWithStatus:kMessageUserGetCodeLoad];
     [MessageCodeTool getMessageCodeWithPhone:self.phoneText.text Zone:nil Success:^{
         [SVProgressHUD dismiss];
         if (self.option) {
             self.option();
         }
     } Error:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:@"获取验证码失败，请稍后重试"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserGetCodeError];
     }];
 }
 

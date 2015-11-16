@@ -7,6 +7,7 @@
 //
 
 #import <Foundation/Foundation.h>
+#import "SkywareUIMessage.h"    // SkywareUI 中提示消息
 #import <LXSingleton.h>
 #import <SkywareSDK.h>
 

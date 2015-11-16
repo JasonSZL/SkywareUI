@@ -43,17 +43,17 @@
 {
     [super setParams:params];
     [self.againBtn startWithTimer:60];
-    self.phoneTitle.text = [NSString stringWithFormat:@"激活码已发送到您%@的手机",self.params[@"phone"]];
+    self.phoneTitle.text = [NSString stringWithFormat:kMessageUserGetCodeSuccess,self.params[@"phone"]];
 }
 
 
 - (IBAction)againBtnClick:(UIButton *)sender {
     [self.againBtn startWithTimer:60];
-    [SVProgressHUD showWithStatus:@"获取验证码中..."];
+    [SVProgressHUD showWithStatus:kMessageUserGetCodeLoad];
     [MessageCodeTool getMessageCodeWithPhone:self.params[@"phone"] Zone:nil Success:^{
         [SVProgressHUD dismiss];
     } Error:^(NSError *error) {
-        [SVProgressHUD showErrorWithStatus:@"获取验证码失败，请稍后重试"];
+        [SVProgressHUD showErrorWithStatus:kMessageUserGetCodeError];
     }];
 }
 
@@ -63,7 +63,7 @@
     
     if(self.authCode.text.length!=4)
     {
-        [SVProgressHUD showInfoWithStatus:@"请输入4位验证码"];
+        [SVProgressHUD showInfoWithStatus:kMessageUserWriteCode];
         return;
     }else{
         [MessageCodeTool commitVerifyCode:self.authCode.text Success:^{
@@ -71,7 +71,7 @@
                 self.option();
             }
         } Error:^{
-            [SVProgressHUD showErrorWithStatus:@"验证码有误,请重新输入"];
+            [SVProgressHUD showErrorWithStatus:kMessageUserWriteCodeError];
         }];
     }
 }

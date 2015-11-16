@@ -146,9 +146,9 @@
 
 - (void) smartLinkSettingSuccessWithDev:(HFSmartLinkDeviceInfo *) dev
 {
-    if (!self.isAddDevice) { // 配网
+    if (!self.isAddDevice) { // 配网成功
         [self.navigationController popToRootViewControllerAnimated:YES];
-        [SVProgressHUD showSuccessWithStatus:@"配网成功"];
+        [SVProgressHUD showSuccessWithStatus:kMessageDeviceSettingWiFiSuccess];
     }else{ // 添加设备
         _MAC = dev.mac;
         // 循环查询方式查看设备是否上报信息
@@ -170,7 +170,7 @@
         NSLog(@"找到设备");
         // 该设备已经被合法的SN绑定过
         if(_deviceInfo.device_sn.length){
-            [SVProgressHUD showErrorWithStatus:@"该SN码已被使用 请查证后重试"];
+            [SVProgressHUD showErrorWithStatus:kMessageDeviceCheckSNUsed];
             _state = inputPassword;
             [self toPage:2];
         }else{
@@ -203,7 +203,7 @@
         // 用户设备绑定
         [self deviceBindUser];
     } failure:^(SkywareResult *result) {
-        [SVProgressHUD showErrorWithStatus:@"绑定失败，请稍后重试"];
+        [SVProgressHUD showErrorWithStatus:kMessageDeviceBindDeviceError];
     }];
 }
 
@@ -215,10 +215,11 @@
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
     [params setObject:_deviceInfo.device_mac forKey:@"device_mac"];
     [SkywareDeviceManagement DeviceBindUser:params Success:^(SkywareResult *result) {
-        [SVProgressHUD showSuccessWithStatus:@"恭喜您，绑定成功"];
+        [SVProgressHUD showSuccessWithStatus:kMessageDeviceBindDeviceSuccess];
+        [[NSNotificationCenter defaultCenter] postNotificationName:kDeviceRelseaseUserRefreshTableView object:nil];
         [self.navigationController popToRootViewControllerAnimated:YES];
     } failure:^(SkywareResult *result) {
-        [SVProgressHUD showErrorWithStatus:@"绑定失败，请稍后重试"];
+        [SVProgressHUD showErrorWithStatus:kMessageDeviceBindDeviceError];
     }];
 }
 

@@ -36,10 +36,10 @@
         [SkywareDeviceManagement DeviceVerifySN:self.codeTextField.text Success:^(SkywareResult *result) {
             [self queryDeviceMessage];
         } failure:^(SkywareResult *result) {
-            [SVProgressHUD showErrorWithStatus:@"未找到该SN码 请重试"];
+            [SVProgressHUD showErrorWithStatus:kMessageDeviceNotFindSNCode];
         }];
     }else{
-        [SVProgressHUD showErrorWithStatus:@"请输入机身编码"];
+        [SVProgressHUD showErrorWithStatus:kMessageDeviceWriteSNCode];
     }
 }
 - (IBAction)readQRCode:(UIButton *)sender {
@@ -58,7 +58,7 @@
     [SkywareDeviceManagement DeviceQueryInfo:query Success:^(SkywareResult *result) {
         SkywareDeviceInfoModel *model = [SkywareDeviceInfoModel objectWithKeyValues:result.result];
         if (![model.device_lock boolValue]) { // 该设备已经锁定，禁止再绑定
-            [SVProgressHUD showErrorWithStatus:@"该设备已经锁定 请先解锁"];
+            [SVProgressHUD showErrorWithStatus:kMessageDeviceClock];
             return ;
         }
         // SN 已经绑定了MAC,直接和用户绑定

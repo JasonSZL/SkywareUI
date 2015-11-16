@@ -10,7 +10,6 @@
 
 @interface MessageCodeTool : NSObject
 
-
 /**
  *  发送短信获取验证码
  *
@@ -29,9 +28,5 @@
  *  @param failure 错误
  */
 + (void) commitVerifyCode :(NSString *) code Success:(void(^)()) success Error:(void(^)()) failure;
-
-
-
-
 
 @end

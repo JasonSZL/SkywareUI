@@ -54,7 +54,7 @@
     [dict setObject:phone forKey:@"login_id"];
     [dict setObject:self.password.text forKey:@"login_pwd"];
     [SkywareUserManagement UserRegisterWithParamesers:dict Success:^(SkywareResult *result) {
-        [SVProgressHUD showSuccessWithStatus:@"恭喜您!注册成功"];
+        [SVProgressHUD showSuccessWithStatus:kMessageUserRegisterSuccess];
         [Delegate.navigationController popToRootViewControllerAnimated:YES];
     } failure:^(SkywareResult *result) {
         [SVProgressHUD showErrorWithStatus:@"网络不给力,请稍后重试"];

@@ -25,6 +25,9 @@
 #import "DeviceSettingErrorView.h"
 #import "DeviceBindingView.h"
 
+/** Skyware_UI */
+#import "SkywareUIConst.h"
+
 typedef enum {
     inputPassword,  // 输入密码
     resetDevice,   // 重置设备，灯闪亮

@@ -24,13 +24,6 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
-    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
-    self.window.backgroundColor = [UIColor whiteColor];
-    UserLoginViewController *loginRegister = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];
-    self.window.rootViewController = loginRegister;
-    self.navigationController = (UINavigationController *)loginRegister;
-    [self.window makeKeyAndVisible];
-    
     // 设置 App_id
     SkywareInstanceModel *skywareInstance = [SkywareInstanceModel sharedSkywareInstanceModel];
     skywareInstance.app_id = 5;
@@ -46,10 +39,20 @@
     // 设置系统样式
     [self settingSystemStyle];
     
-//    // 设置假的 token
-//    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-//    instance.token = @"afc5a01fd7534a1a9cd81d0efcc6c5f9";
-//    
+    //    // 设置假的 token
+    //    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
+    //    instance.token = @"afc5a01fd7534a1a9cd81d0efcc6c5f9";
+    
+    
+    self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
+    self.window.backgroundColor = [UIColor whiteColor];
+    UserLoginViewController *loginRegister = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];
+    self.window.rootViewController = loginRegister;
+    self.navigationController = (UINavigationController *)loginRegister;
+    [self.window makeKeyAndVisible];
+    
+    
+    
     
     return YES;
 }
