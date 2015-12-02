@@ -131,7 +131,7 @@
 
 - (void) VerifyCode
 {
-    [MessageCodeTool commitVerifyCode:self.code.text Success:^{
+    [MessageCodeTool commitVerifyCode:self.code.text Phone:self.phone.text Zone:nil Success:^{
         [self changePassword];
     } Error:^{
         [SVProgressHUD showErrorWithStatus:kMessageUserWriteCodeError];

@@ -133,8 +133,8 @@
         // 清除保存的用户名密码
         [NSKeyedArchiver archiveRootObject:[[SkywareResult alloc] init] toFile:[PathTool getUserDataPath]];
         // 清除用户detoken
-        SkywareInstanceModel * instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-        instance.token = nil;
+        SkywareSDKManager *manager = [SkywareSDKManager sharedSkywareSDKManager];
+        manager.token = nil;
         dispatch_after(dispatch_time(DISPATCH_TIME_NOW, (int64_t)(0.5 * NSEC_PER_SEC)), dispatch_get_main_queue(), ^{
             // 调回到登陆界面
             UserLoginViewController *loginRegister = [[UIStoryboard storyboardWithName:@"User" bundle:nil] instantiateInitialViewController];

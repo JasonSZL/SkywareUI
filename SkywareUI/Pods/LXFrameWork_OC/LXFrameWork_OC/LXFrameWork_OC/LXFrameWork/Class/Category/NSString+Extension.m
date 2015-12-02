@@ -12,11 +12,10 @@
 
 - (CGSize) sizeWithFont:(UIFont *) font
 {
-    
-    return [self sizeWithFont:font :MAXFLOAT];
+    return [self sizeWithFont:font Width:MAXFLOAT];
 }
 
-- (CGSize) sizeWithFont:(UIFont *)font :(CGFloat) width
+- (CGSize) sizeWithFont:(UIFont *)font Width:(CGFloat) width
 {
     NSDictionary *dict = @{NSFontAttributeName:font};
     CGSize size = [self boundingRectWithSize:CGSizeMake(width, MAXFLOAT) options:NSStringDrawingUsesFontLeading | NSStringDrawingUsesLineFragmentOrigin attributes:dict context:nil].size;
@@ -25,11 +24,10 @@
 
 - (NSString *)encodeToPercentEscapeString
 {
-    NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL, /* allocator */(__bridge CFStringRef)self,NULL, /* charactersToLeaveUnescaped */(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
+    NSString *outputStr = (__bridge NSString *)CFURLCreateStringByAddingPercentEscapes(NULL,(__bridge CFStringRef)self,NULL,(CFStringRef)@"!*'();:@&=+$,/?%#[]",kCFStringEncodingUTF8);
     CFRelease((__bridge CFTypeRef)(outputStr));
     return outputStr;
 }
-
 
 - (NSString *)decodeFromPercentEscapeString
 {
@@ -38,14 +36,14 @@
     return [outputStr stringByReplacingPercentEscapesUsingEncoding:NSUTF8StringEncoding];
 }
 
-+ (NSString *)applicationDocumentsDirectory {
++ (NSString *)getApplicationDocumentsDirectory {
     
     NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
     NSString *basePath = ([paths count] > 0) ? [paths objectAtIndex:0] : nil;
     return basePath;
 }
 
-- (NSString *)dateStringFromtYYYYMMDD
+- (NSString *)FormatterYYYYMMDD
 {
     NSDateFormatter *formatter = [[NSDateFormatter alloc]init];
     formatter.dateFormat = @"yyyy-MM-dd HH:mm:ss";
@@ -54,7 +52,7 @@
     return [formatter stringFromDate:date];
 }
 
--(NSString*) getTheCorrect
+-(NSString*) removeStringFrontZero
 {
     NSString *str = self;
     while ([str hasPrefix:@"0"]){
@@ -63,16 +61,7 @@
     return str;
 }
 
--(id)JSONValue
-{
-    NSData* data = [self dataUsingEncoding:NSUTF8StringEncoding];
-    __autoreleasing NSError* error = nil;
-    id result = [NSJSONSerialization JSONObjectWithData:data options:kNilOptions error:&error];
-    if (error != nil) return nil;
-    return result;
-}
-
--(NSData*) hexToBytes {
+-(NSData*) stringHexToBytes {
     NSMutableData* data = [NSMutableData data];
     int idx;
     for (idx = 0; idx+2 <= self.length; idx+=2) {
@@ -84,6 +73,20 @@
         [data appendBytes:&intValue length:1];
     }
     return data;
+}
+
+- (NSDate *)FormatterDateFromYMDHMS
+{
+    NSDateFormatter *strToDateFor = [[NSDateFormatter alloc]init];
+    strToDateFor.dateFormat = @"yyyy/MM/dd HH:mm:ss";
+    return [strToDateFor dateFromString:self];
+}
+
+- (NSDate *)FormatterDateFromYMD
+{
+    NSDateFormatter *strToDateFor = [[NSDateFormatter alloc]init];
+    strToDateFor.dateFormat = @"yyyy/MM/dd";
+    return [strToDateFor dateFromString:self];
 }
 
 @end

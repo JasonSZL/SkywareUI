@@ -12,7 +12,7 @@
 
 + (void)UserAddressWeatherParamesers:(SkywareWeatherModel *)model Success:(void (^)(SkywareResult *))success failure:(void (^)(SkywareResult *))failure
 {
-    [SkywareHttpTool HttpToolPostWithUrl:Address_wpm paramesers:model.keyValues requestHeaderField:nil SuccessJson:^(id json) {
+    [SkywareHttpTool HttpToolPostWithUrl:Address_wpm paramesers:model.mj_keyValues requestHeaderField:nil SuccessJson:^(id json) {
         [SkywareHttpTool responseHttpToolWithJson:json Success:success failure:failure];
     } failure:^(NSError *error) {
         

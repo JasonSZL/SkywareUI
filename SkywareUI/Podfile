@@ -1,4 +1,3 @@
 platform :ios, '7.0'
-pod 'LXFrameWork_OC'
 pod 'SkywareSDK'
 pod 'SMS_SDK'

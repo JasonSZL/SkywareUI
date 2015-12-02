@@ -66,7 +66,7 @@
         [SVProgressHUD showInfoWithStatus:kMessageUserWriteCode];
         return;
     }else{
-        [MessageCodeTool commitVerifyCode:self.authCode.text Success:^{
+        [MessageCodeTool commitVerifyCode:self.authCode.text Phone:self.params[@"phone"] Zone:nil Success:^{
             if (self.option) {
                 self.option();
             }

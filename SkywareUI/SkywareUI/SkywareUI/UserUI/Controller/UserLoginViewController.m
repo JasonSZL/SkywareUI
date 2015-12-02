@@ -73,11 +73,6 @@
         result.phone = self.phone.text;
         result.password = self.password.text;
         [NSKeyedArchiver archiveRootObject:result toFile:[PathTool getUserDataPath]];
-        
-        // 将用户token 保存到单例中
-        SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-        instance.token = result.token;
-        
         [SVProgressHUD dismiss];
         [UIWindow changeWindowRootViewController:[[UIStoryboard storyboardWithName:@"Home" bundle:nil] instantiateInitialViewController] animated:YES];
     } failure:^(SkywareResult *result) {

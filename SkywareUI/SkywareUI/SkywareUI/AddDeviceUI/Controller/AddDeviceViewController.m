@@ -165,7 +165,7 @@
     queryInfo.mac = _MAC;
     [SkywareDeviceManagement DeviceQueryInfo:queryInfo Success:^(SkywareResult *result) {
         // 查询到设备后停止计时查询
-        _deviceInfo = [SkywareDeviceInfoModel objectWithKeyValues:result.result];
+        _deviceInfo = [SkywareDeviceInfoModel mj_objectWithKeyValues:result.result];
         [self endTimed];
         NSLog(@"找到设备");
         // 该设备已经被合法的SN绑定过

@@ -31,7 +31,7 @@
     [self.dataList removeAllObjects];
     [SVProgressHUD show];
     [SkywareDeviceManagement DeviceGetAllDevicesSuccess:^(SkywareResult *result) {
-        NSArray *dataArray = [SkywareDeviceInfoModel objectArrayWithKeyValuesArray:result.result];
+        NSArray *dataArray = [SkywareDeviceInfoModel mj_objectArrayWithKeyValuesArray:result.result];
         [self deviceInfoWithArray:dataArray];
         [SVProgressHUD dismiss];
     } failure:^(SkywareResult *result) {

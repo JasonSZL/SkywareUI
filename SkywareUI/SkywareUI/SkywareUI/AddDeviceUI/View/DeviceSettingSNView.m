@@ -57,7 +57,7 @@
     SkywareDeviceQueryInfoModel *query = [[SkywareDeviceQueryInfoModel alloc] init];
     query.sn = self.codeTextField.text;
     [SkywareDeviceManagement DeviceQueryInfo:query Success:^(SkywareResult *result) {
-        SkywareDeviceInfoModel *model = [SkywareDeviceInfoModel objectWithKeyValues:result.result];
+        SkywareDeviceInfoModel *model = [SkywareDeviceInfoModel mj_objectWithKeyValues:result.result];
         if (![model.device_lock boolValue]) { // 该设备已经锁定，禁止再绑定
             [SVProgressHUD showErrorWithStatus:kMessageDeviceClock];
             return ;

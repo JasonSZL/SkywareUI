@@ -1,23 +1,23 @@
 PODS:
-  - AFNetworking (2.6.0):
-    - AFNetworking/NSURLConnection (= 2.6.0)
-    - AFNetworking/NSURLSession (= 2.6.0)
-    - AFNetworking/Reachability (= 2.6.0)
-    - AFNetworking/Security (= 2.6.0)
-    - AFNetworking/Serialization (= 2.6.0)
-    - AFNetworking/UIKit (= 2.6.0)
-  - AFNetworking/NSURLConnection (2.6.0):
+  - AFNetworking (2.6.3):
+    - AFNetworking/NSURLConnection (= 2.6.3)
+    - AFNetworking/NSURLSession (= 2.6.3)
+    - AFNetworking/Reachability (= 2.6.3)
+    - AFNetworking/Security (= 2.6.3)
+    - AFNetworking/Serialization (= 2.6.3)
+    - AFNetworking/UIKit (= 2.6.3)
+  - AFNetworking/NSURLConnection (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/NSURLSession (2.6.0):
+  - AFNetworking/NSURLSession (2.6.3):
     - AFNetworking/Reachability
     - AFNetworking/Security
     - AFNetworking/Serialization
-  - AFNetworking/Reachability (2.6.0)
-  - AFNetworking/Security (2.6.0)
-  - AFNetworking/Serialization (2.6.0)
-  - AFNetworking/UIKit (2.6.0):
+  - AFNetworking/Reachability (2.6.3)
+  - AFNetworking/Security (2.6.3)
+  - AFNetworking/Serialization (2.6.3)
+  - AFNetworking/UIKit (2.6.3):
     - AFNetworking/NSURLConnection
     - AFNetworking/NSURLSession
   - FMDB (2.5):
@@ -26,7 +26,7 @@ PODS:
   - FMDB/standard (2.5):
     - FMDB/common
   - HF_SmartLink (1.0.0)
-  - IQKeyboardManager (3.3.2)
+  - IQKeyboardManager (3.3.4)
   - LXFrameWork_OC (2.5.2):
     - AFNetworking
     - FMDB
@@ -38,44 +38,41 @@ PODS:
     - SDWebImage
     - SSZipArchive
     - SVProgressHUD
-    - ZipArchive
-  - MJExtension (2.5.12)
-  - MJRefresh (2.4.11)
-  - MQTTClient (0.2.6)
+  - MJExtension (3.0.7)
+  - MJRefresh (3.0.7)
+  - MQTTClient (0.5.0)
   - PureLayout (3.0.1)
   - Reachability (3.2)
   - SDWebImage (3.7.3):
     - SDWebImage/Core (= 3.7.3)
   - SDWebImage/Core (3.7.3)
-  - SkywareSDK (1.0.6):
+  - SkywareSDK (1.0.7):
     - HF_SmartLink
+    - LXFrameWork_OC
     - MQTTClient
-  - SMS_SDK (1.0.0)
-  - SSZipArchive (0.3.2)
+  - SMS_SDK (1.1.1)
+  - SSZipArchive (1.0.1)
   - SVProgressHUD (1.1.3)
-  - ZipArchive (1.4.0)
 
 DEPENDENCIES:
-  - LXFrameWork_OC
   - SkywareSDK
   - SMS_SDK
 
 SPEC CHECKSUMS:
-  AFNetworking: 79f7eb1a0fcfa7beb409332b2ca49afe9ce53b05
+  AFNetworking: cb8d14a848e831097108418f5d49217339d4eb60
   FMDB: 96e8f1bcc1329e269330f99770ad4285d9003e52
-  HF_SmartLink: be555619eec31c5b875cf8f4d0161e8eed265c03
-  IQKeyboardManager: d863eb0bca424d1f6dad6bdd1f856af52664add8
-  LXFrameWork_OC: 7c861c2be376817bcf0ed028e81f9144d7668e48
-  MJExtension: 5ab633484e431f777387c70b676c80f993361f1b
-  MJRefresh: b327947f35ab3eb16ca42646b26f7347e6aa7186
-  MQTTClient: f3af97fd4e26e0644364cb24e809b9646afce202
+  HF_SmartLink: f9759d4ace7f4f6771ec39fb14929b30312f5747
+  IQKeyboardManager: ac803e61e5b50efae6b3aeedd95a02c7c7d3b2b3
+  LXFrameWork_OC: 9dbbf235792ffb8f97ea9d90eaedf55db76c1787
+  MJExtension: 290cc966f0f849b12b6391a38e296e0004ae8e5e
+  MJRefresh: f3e1228ec3d38c7ba5208d58032631a52f39f495
+  MQTTClient: 9e765972d0cc584a2c35e3281b9ede94911e784f
   PureLayout: f35f5384c9c4e4479df041dbe33ad7577b71ddfb
   Reachability: 33e18b67625424e47b6cde6d202dce689ad7af96
   SDWebImage: 1d2b1a1efda1ade1b00b6f8498865f8ddedc8a84
-  SkywareSDK: 7aa0dad2cd7114abbded7cb584be593029a15757
-  SMS_SDK: 4dc6b8a23e2eb4787d1b9d8adabf1eb801fac118
-  SSZipArchive: 11801759495fa4efb7512ef652eb0042d68305d7
+  SkywareSDK: 8296fb883ff037781906d6b5dcbd6d30bac0759a
+  SMS_SDK: 904effe1239a6d2677586adf5063cdf0a0024186
+  SSZipArchive: 5f30a0af2cb3d48c0ff83b1e18029f7041ac3c38
   SVProgressHUD: 748080e4f36e603f6c02aec292664239df5279c1
-  ZipArchive: e25a4373192673e3229ac8d6e9f64a3e5713c966
 
-COCOAPODS: 0.38.2
+COCOAPODS: 0.39.0

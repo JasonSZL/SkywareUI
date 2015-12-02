@@ -9,7 +9,7 @@
 #import "AppDelegate.h"
 #import "AddDeviceViewController.h"
 #import "SkywareUIInstance.h"
-#import <SMS_SDK/SMS_SDK.h>
+#import <SMS_SDK/SMSSDK.h>
 #import <ImportClass.h>
 #import "UserLoginViewController.h"
 
@@ -25,16 +25,16 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     
     // 设置 App_id
-    SkywareInstanceModel *skywareInstance = [SkywareInstanceModel sharedSkywareInstanceModel];
-    skywareInstance.app_id = 5;
+    SkywareSDKManager *manager = [SkywareSDKManager sharedSkywareSDKManager];
+    manager.app_id = 5;
+    manager.service_ype = developer_new; // 开发服务器
     
     // 设置弹出框后不可操作
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setBackgroundColor:kRGBColor(230, 230, 230, 1)];
     
     // 启动ShareSDK 的短信功能
-    [SMS_SDK registerApp:SMS_SDKAppKey withSecret:SMS_SDKAppSecret];
-    [SMS_SDK enableAppContactFriends:NO];
+    [SMSSDK registerApp:SMS_SDKAppKey withSecret:SMS_SDKAppSecret];
     
     // 设置系统样式
     [self settingSystemStyle];

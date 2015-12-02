@@ -31,7 +31,7 @@
 {
     [SVProgressHUD show];
     [SkywareUserManagement UserGetUserWithParamesers:nil Success:^(SkywareResult *result) {
-        SkywareUserInfoModel *userInfo = [SkywareUserInfoModel objectWithKeyValues:[result.result firstObject]];
+        SkywareUserInfoModel *userInfo = [SkywareUserInfoModel mj_objectWithKeyValues:[result.result firstObject]];
         [SVProgressHUD dismiss];
         [self setUpDataListWith:userInfo];
     } failure:^(SkywareResult *result) {

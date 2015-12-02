@@ -34,7 +34,7 @@
  */
 +(void) responseHttpToolWithJson:(id)json Success:(void(^)(SkywareResult *result)) success failure:(void (^)(SkywareResult *result)) failure
 {
-    SkywareResult *result = [SkywareResult objectWithKeyValues:json];
+    SkywareResult *result = [SkywareResult mj_objectWithKeyValues:json];
     NSInteger message = [result.message integerValue];
     if (message == request_frequently) {
         [SVProgressHUD showInfoWithStatus:@"亲～慢点我快顶不住了..."];

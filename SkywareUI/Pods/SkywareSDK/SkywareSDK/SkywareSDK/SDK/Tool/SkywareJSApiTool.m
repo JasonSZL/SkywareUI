@@ -7,10 +7,6 @@
 //
 
 #import "SkywareJSApiTool.h"
-#import "BaseDelegate.h"
-#import <CoreLocationTool.h>
-#import <UIWindow+Extension.h>
-#define KBaseDelegate  ((BaseDelegate *)[UIApplication sharedApplication].delegate)
 
 @interface SkywareJSApiTool ()<UIActionSheetDelegate>
 {
@@ -52,9 +48,12 @@
             }else if([str isEqualToString:@"goback"]){
                 [KBaseDelegate.navigationController popViewControllerAnimated:YES];
             }else if ([str isEqualToString:@"gomenu"]){
-                [self showMenuActionSheet];
+                if ([self.delegate respondsToSelector:@selector(SkywareJSApiWillShowMenu:)]) {
+                    [self.delegate SkywareJSApiWillShowMenu:self];
+                }
             }else if ([str isEqualToString:@"goshare"]){
-                [SVProgressHUD showSuccessWithStatus:@"敬请期待!"];
+                //                [SVProgressHUD showSuccessWithStatus:@"敬请期待!"];
+                [self goShare];
             }
         }];
         return NO;
@@ -62,11 +61,41 @@
     return YES;
 }
 
-- (void) showMenuActionSheet
+- (void) goShare
 {
-    UIActionSheet *seet =  [[UIActionSheet alloc] initWithTitle:@"更多" delegate:self cancelButtonTitle:@"取消" destructiveButtonTitle:nil otherButtonTitles:@"修改设备名称",@"检查固件升级",@"解除连接",@"反馈", nil] ;
-    
-    [seet showInView:[UIWindow getCurrentWindow]];
+    //    NSString *imagePath = [[NSBundle mainBundle] pathForResource:@"ShareSDK" ofType:@"png"];
+    //
+    //    //构造分享内容
+    //    id<ISSContent> publishContent = [ShareSDK content:@"分享内容"
+    //                                       defaultContent:@"测试一下"
+    //                                                image:[ShareSDK imageWithPath:imagePath]
+    //                                                title:@"ShareSDK"
+    //                                                  url:@"http://www.mob.com"
+    //                                          description:@"这是一条测试信息"
+    //                                            mediaType:SSPublishContentMediaTypeNews];
+    //    //创建弹出菜单容器
+    //    id<ISSContainer> container = [ShareSDK container];
+    //    UIWindow *window = [UIWindow getCurrentWindow];
+    //    [container setIPadContainerWithView:window arrowDirect:UIPopoverArrowDirectionUp];
+    //
+    //    //弹出分享菜单
+    //    [ShareSDK showShareActionSheet:container
+    //                         shareList:nil
+    //                           content:publishContent
+    //                     statusBarTips:YES
+    //                       authOptions:nil
+    //                      shareOptions:nil
+    //                            result:^(ShareType type, SSResponseState state, id<ISSPlatformShareInfo> statusInfo, id<ICMErrorInfo> error, BOOL end) {
+    //
+    //                                if (state == SSResponseStateSuccess)
+    //                                {
+    //                                    NSLog(@"分享成功");
+    //                                }
+    //                                else if (state == SSResponseStateFail)
+    //                                {
+    //                                    NSLog(@"分享失败,错误码:%ld,错误描述:%@", [error errorCode], [error errorDescription]);
+    //                                }
+    //                            }];
     
 }
 
@@ -147,10 +176,11 @@
  */
 - (void) sendCmdToDeviceWith:(SkywareSendCmdModel *) send
 {
-    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
+    // 获取当前正在操作的 Device
+    SkywareDeviceInfoModel *info = [SkywareSDKManager sharedSkywareSDKManager].currentDevice;
     NSMutableDictionary *params = [NSMutableDictionary dictionary];
-    if (!instance) return;
-    [params setObject: instance.device_id forKey:@"device_id"];
+    if (!info) return;
+    [params setObject: info.device_id forKey:@"device_id"];
     [params setObject: send.commandv forKey:@"commandv"];
     [SVProgressHUD show];
     [SkywareDeviceManagement DevicePushCMD:params Success:^(SkywareResult *result) {
@@ -167,11 +197,11 @@
  */
 - (SkywareResult *)queryDeviceInfoToWebView:(UIWebView *) webView
 {
-    [SVProgressHUD show];
     __block typeof(SkywareResult) *httpResult;
     SkywareDeviceQueryInfoModel *query = [[SkywareDeviceQueryInfoModel alloc] init];
-    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-    query.id = instance.device_id;
+    SkywareDeviceInfoModel *info = [SkywareSDKManager sharedSkywareSDKManager].currentDevice;
+    query.id = info.device_id;
+    [SVProgressHUD show];
     [SkywareDeviceManagement DeviceQueryInfo:query Success:^(SkywareResult *result) {
         httpResult = result;
         [self onGotCurDevInfoJsonStr:[result.result JSONString] Type:nil ToWebView:webView];

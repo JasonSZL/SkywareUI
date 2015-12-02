@@ -9,7 +9,7 @@
 #import <Foundation/Foundation.h>
 #import "SkywareSDK.h"
 #import <HttpTool.h>
-#import <BundleTool.h>
+#import <SystemDeviceTool.h>
 #import <SVProgressHUD.h>
 #import <NSString+Hash.h>
 #import <NSString+Extension.h>

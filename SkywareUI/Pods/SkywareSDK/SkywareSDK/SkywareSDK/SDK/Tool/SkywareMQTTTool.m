@@ -13,7 +13,7 @@
 + (SkywareMQTTModel *)conversionMQTTResultWithData:(NSData *) data
 {
     NSDictionary *dataDict = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableLeaves error:nil];
-    SkywareMQTTModel *model = [SkywareMQTTModel objectWithKeyValues:dataDict];
+    SkywareMQTTModel *model = [SkywareMQTTModel mj_objectWithKeyValues:dataDict];
     if (model.data.count) { // 手动添加，如果data.cout 有值，说明设备在线
         model.device_online = 1;
     }

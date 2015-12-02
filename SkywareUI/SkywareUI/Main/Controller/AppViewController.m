@@ -35,8 +35,8 @@
     } AndDetailClass:nil];
     
     BaseArrowCellItem *item2 = [BaseArrowCellItem createBaseCellItemWithIcon:nil AndTitle:@"UserMenu" SubTitle:@"菜单选项" ClickOption:^{
-        SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-        if(!instance.token.length){
+        SkywareSDKManager *manager = [SkywareSDKManager sharedSkywareSDKManager];
+        if(!manager.token.length){
             [SVProgressHUD showErrorWithStatus:@"查看菜单请先登录"];
             return ;
         }
