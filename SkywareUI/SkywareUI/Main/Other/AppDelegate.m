@@ -10,6 +10,7 @@
 #import "AddDeviceViewController.h"
 #import "SkywareUIInstance.h"
 #import <SMS_SDK/SMSSDK.h>
+#import <SMS_SDK/SMSSDK+AddressBookMethods.h>
 #import <ImportClass.h>
 #import "UserLoginViewController.h"
 
@@ -33,16 +34,12 @@
     [SVProgressHUD setDefaultMaskType:SVProgressHUDMaskTypeClear];
     [SVProgressHUD setBackgroundColor:kRGBColor(230, 230, 230, 1)];
     
-    // 启动ShareSDK 的短信功能
+    // 启动ShareSDK 的短信功能,关闭获取通讯录功能
     [SMSSDK registerApp:SMS_SDKAppKey withSecret:SMS_SDKAppSecret];
+    [SMSSDK enableAppContactFriends:NO];
     
     // 设置系统样式
     [self settingSystemStyle];
-    
-    //    // 设置假的 token
-    //    SkywareInstanceModel *instance = [SkywareInstanceModel sharedSkywareInstanceModel];
-    //    instance.token = @"afc5a01fd7534a1a9cd81d0efcc6c5f9";
-    
     
     self.window = [[UIWindow alloc] initWithFrame:[UIScreen mainScreen].bounds];
     self.window.backgroundColor = [UIColor whiteColor];
@@ -50,9 +47,6 @@
     self.window.rootViewController = loginRegister;
     self.navigationController = (UINavigationController *)loginRegister;
     [self.window makeKeyAndVisible];
-    
-    
-    
     
     return YES;
 }

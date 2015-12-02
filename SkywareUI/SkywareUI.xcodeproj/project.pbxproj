@@ -21,7 +21,6 @@
 		4E5433CA1B8B158300BFA012 /* settingWifiAlert@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433C91B8B158300BFA012 /* settingWifiAlert@2x.png */; };
 		4E5433CC1B8B158A00BFA012 /* smartlink_hint@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 4E5433CB1B8B158A00BFA012 /* smartlink_hint@2x.png */; };
 		4E5FDA541B89FFFC00F7268D /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0D1B89FFFC00F7268D /* AppDelegate.m */; };
-		4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0E1B89FFFC00F7268D /* Info.plist */; };
 		4E5FDA561B89FFFC00F7268D /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA0F1B89FFFC00F7268D /* main.m */; };
 		4E5FDAB81B8A011A00F7268D /* AddDeviceViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 4E5FDA791B8A011900F7268D /* AddDeviceViewController.m */; };
 		4E5FDAB91B8A011A00F7268D /* AddDeviceViews.xib in Resources */ = {isa = PBXBuildFile; fileRef = 4E5FDA7B1B8A011900F7268D /* AddDeviceViews.xib */; };
@@ -546,7 +545,7 @@
 		4EBC50B31B87163F00A71618 /* Project object */ = {
 			isa = PBXProject;
 			attributes = {
-				LastUpgradeCheck = 0640;
+				LastUpgradeCheck = 0710;
 				ORGANIZATIONNAME = skyware;
 				TargetAttributes = {
 					4EBC50BA1B87163F00A71618 = {
@@ -604,7 +603,6 @@
 				4E5433CA1B8B158300BFA012 /* settingWifiAlert@2x.png in Resources */,
 				4E5FDAB91B8A011A00F7268D /* AddDeviceViews.xib in Resources */,
 				4E5433C61B8B156100BFA012 /* cb_red_default@2x.png in Resources */,
-				4E5FDA551B89FFFC00F7268D /* Info.plist in Resources */,
 				4E5FDAC71B8A011A00F7268D /* SystemFeedBackViewController.xib in Resources */,
 				4E5FDAC21B8A011A00F7268D /* DeviceEditInfoViewController.xib in Resources */,
 			);
@@ -743,6 +741,7 @@
 				COPY_PHASE_STRIP = NO;
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu99;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -809,10 +808,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SkywareUI/Main/Lib/SMS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SkywareUI/Main/Other/SkywareUI.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SkywareUI/Main/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -821,6 +817,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/HF_SmartLink/SmartLink/FrameWork",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyware.cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
@@ -832,10 +829,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
 				ENABLE_BITCODE = NO;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/SkywareUI/Main/Lib/SMS_SDK",
-				);
+				FRAMEWORK_SEARCH_PATHS = "$(inherited)";
 				GCC_PREFIX_HEADER = "$(SRCROOT)/SkywareUI/Main/Other/SkywareUI.pch";
 				INFOPLIST_FILE = "$(SRCROOT)/SkywareUI/Main/Other/Info.plist";
 				IPHONEOS_DEPLOYMENT_TARGET = 7.0;
@@ -844,6 +838,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/Pods/HF_SmartLink/SmartLink/FrameWork",
 				);
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyware.cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
@@ -862,6 +857,7 @@
 				);
 				INFOPLIST_FILE = SkywareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyware.cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkywareUI.app/SkywareUI";
 			};
@@ -877,6 +873,7 @@
 				);
 				INFOPLIST_FILE = SkywareUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
+				PRODUCT_BUNDLE_IDENTIFIER = "com.skyware.cn.$(PRODUCT_NAME:rfc1034identifier)";
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/SkywareUI.app/SkywareUI";
 			};
